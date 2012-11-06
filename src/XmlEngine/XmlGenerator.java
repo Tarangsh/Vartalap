@@ -1,5 +1,6 @@
 package XmlEngine;
 
+import android.util.Log;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -37,7 +38,7 @@ public class XmlGenerator {
         }
         catch(Exception e)
         {
-
+            Log.d("XML Exception",e.toString());
         }
     }
 
@@ -87,7 +88,7 @@ public class XmlGenerator {
           }
           catch(Exception e)
           {
-              System.out.println(e.toString());
+              Log.d("XML Exception",e.toString());
           }
 
           docStr = stringWriter.toString();
