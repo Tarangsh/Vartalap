@@ -11,15 +11,26 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int gray=0x7f020000;
+        public static final int green=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
+        public static final int icon=0x7f020003;
+        public static final int orange=0x7f020004;
+        public static final int red=0x7f020005;
     }
     public static final class id {
+        public static final int accounttype=0x7f05000e;
+        public static final int availabilityimage=0x7f05000c;
         public static final int inputname=0x7f050002;
         public static final int inputpwd=0x7f050005;
         public static final int loginbutton=0x7f050007;
         public static final int password=0x7f050004;
         public static final int pwd_layout=0x7f050003;
-        public static final int rosterid=0x7f050009;
+        public static final int roster=0x7f050009;
+        public static final int roster_item=0x7f05000b;
+        public static final int rosterlist=0x7f05000a;
+        public static final int rowimage=0x7f05000f;
+        public static final int rowjid=0x7f05000d;
         public static final int status=0x7f050008;
         public static final int sub_layout=0x7f050006;
         public static final int uid_layout=0x7f050000;
@@ -29,6 +40,7 @@ public final class R {
         public static final int login_screen=0x7f030000;
         public static final int main=0x7f030001;
         public static final int roster=0x7f030002;
+        public static final int roster_item=0x7f030003;
     }
     public static final class string {
         public static final int app_name=0x7f040000;

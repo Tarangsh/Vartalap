@@ -17,17 +17,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e8a80d2-ce2e-4752-8d0b-ef524b5b538f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/login_screen.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/roster.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/auth_engine/AuthHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/login/DisplayLoginActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/roster/DisplayRosterActivity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AuthEngine/AuthEngine.java" afterPath="$PROJECT_DIR$/src/auth_engine/AuthEngine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/gray.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/green.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/orange.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/red.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-ldpi/gray.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-ldpi/green.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-ldpi/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-ldpi/orange.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-ldpi/red.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/gray.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/green.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/orange.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/red.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/gray.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/green.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/orange.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/red.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/roster_item.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/auth_engine/Auth_Handler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contact/Contact.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/roster/RosterManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/roster/contactListAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/example/R.java" afterPath="$PROJECT_DIR$/gen/com/example/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/roster.xml" afterPath="$PROJECT_DIR$/res/layout/roster.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/auth_engine/AuthEngine.java" afterPath="$PROJECT_DIR$/src/auth_engine/AuthEngine.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/login/DisplayLoginActivity.java" afterPath="$PROJECT_DIR$/src/login/DisplayLoginActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/roster/DisplayRosterActivity.java" afterPath="$PROJECT_DIR$/src/roster/DisplayRosterActivity.java" />
     </list>
     <ignored path="Vartalap.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,10 +65,8 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <method_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/auth_engine/AuthEngine.java" line="193" class="auth_engine.AuthEngine" package="auth_engine">
-        <option name="WATCH_ENTRY" value="true" />
-        <option name="WATCH_EXIT" value="true" />
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/auth_engine/AuthHandler.java" line="40" class="auth_engine.AuthHandler" package="auth_engine">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -61,6 +79,34 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/auth_engine/AuthEngine.java" line="228" class="auth_engine.AuthEngine" package="auth_engine">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/auth_engine/AuthEngine.java" line="298" class="auth_engine.AuthEngine" package="auth_engine">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
+    <method_breakpoints>
       <breakpoint url="file://$PROJECT_DIR$/src/auth_engine/AuthEngine.java" line="131" class="auth_engine.AuthEngine" package="auth_engine">
         <option name="WATCH_ENTRY" value="true" />
         <option name="WATCH_EXIT" value="true" />
@@ -77,21 +123,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </method_breakpoints>
-    <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/auth_engine/AuthHandler.java" line="40" class="auth_engine.AuthHandler" package="auth_engine">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -135,7 +166,7 @@
       <file leaf-file-name="DisplayLoginActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/login/DisplayLoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="57" selection-start="1248" selection-end="1288" vertical-scroll-proportion="0.0">
+            <state line="48" column="35" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -144,7 +175,7 @@
       <file leaf-file-name="AuthHandler.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/auth_engine/AuthHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
+            <state line="52" column="67" selection-start="1515" selection-end="1515" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -152,21 +183,80 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AsyncTask.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Android sdk/android-sdk-linux/platforms/android-16/android.jar!/android/os/AsyncTask.class">
+      <file leaf-file-name="Auth_Handler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/auth_engine/Auth_Handler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="32" column="141" selection-start="787" selection-end="787" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#0#2312#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthEngine.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="roster.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/roster.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="35" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="roster_item.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/roster_item.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="51" selection-start="852" selection-end="852" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DisplayRosterActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/roster/DisplayRosterActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="30" selection-start="785" selection-end="785" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contactListAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/roster/contactListAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="58" column="78" selection-start="2026" selection-end="2026" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RosterManager.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/roster/RosterManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="77" selection-start="446" selection-end="446" vertical-scroll-proportion="0.18446602">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#314#323#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Contact.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/contact/Contact.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="96" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthEngine.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/auth_engine/AuthEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="214" column="0" selection-start="6071" selection-end="6071" vertical-scroll-proportion="0.33203885">
+            <state line="300" column="33" selection-start="8563" selection-end="8572" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#1602#1618#0" expanded="true" />
                 <element signature="e#2211#2227#0" expanded="true" />
@@ -174,62 +264,6 @@
                 <element signature="e#2992#3008#0" expanded="true" />
                 <element signature="e#3522#3538#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FutureTask.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Android sdk/android-sdk-linux/platforms/android-16/android.jar!/java/util/concurrent/FutureTask.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#1268#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="107" selection-start="731" selection-end="731" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/MyActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="13" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login_screen.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/login_screen.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="52" selection-start="1835" selection-end="1835" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Base64.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EncodingEngine/Base64.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="570" column="21" selection-start="26326" selection-end="26332" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthEngine.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AuthorizationEngine/AuthEngine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="13" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -247,22 +281,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/XmlEngine/XmlGenerator.java" />
-        <option value="$PROJECT_DIR$/src/XmlEngine/XmlDocjava" />
-        <option value="$PROJECT_DIR$/src/Accounts/Account.java" />
-        <option value="$PROJECT_DIR$/src/XmlEngine/XmlDoc.java" />
-        <option value="$PROJECT_DIR$/src/EncodingEngine/Base64.java" />
         <option value="$PROJECT_DIR$/src/AuthEngine/AuthEngine.java" />
         <option value="$PROJECT_DIR$/res/layout/accounts_screen.xml" />
         <option value="$PROJECT_DIR$/src/Login/DisplayLoginActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/login_screen.xml" />
-        <option value="$PROJECT_DIR$/res/layout/roster.xml" />
-        <option value="$PROJECT_DIR$/src/roster/DisplayRosterActivity.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/SocketManager/ChatSocket.java" />
-        <option value="$PROJECT_DIR$/src/login/DisplayLoginActivity.java" />
         <option value="$PROJECT_DIR$/src/auth_engine/AuthHandler.java" />
+        <option value="$PROJECT_DIR$/src/auth_engine/Auth_Handler.java" />
+        <option value="$PROJECT_DIR$/src/login/DisplayLoginActivity.java" />
         <option value="$PROJECT_DIR$/src/auth_engine/AuthEngine.java" />
+        <option value="$PROJECT_DIR$/res/layout/roster_item.xml" />
+        <option value="$PROJECT_DIR$/res/layout/roster.xml" />
+        <option value="$PROJECT_DIR$/src/contact/Contact.java" />
+        <option value="$PROJECT_DIR$/src/roster/DisplayRosterActivity.java" />
+        <option value="$PROJECT_DIR$/src/roster/contactListAdapter.java" />
+        <option value="$PROJECT_DIR$/src/roster/RosterManager.java" />
       </list>
     </option>
   </component>
@@ -426,6 +460,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="contact" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vartalap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vartalap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="example" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -526,6 +578,78 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-xhdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vartalap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vartalap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-mdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vartalap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vartalap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-ldpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vartalap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vartalap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-hdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vartalap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vartalap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="gen" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -579,6 +703,12 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/res/drawable-xhdpi" />
+      <recent name="$PROJECT_DIR$/res/drawable-mdpi" />
+      <recent name="$PROJECT_DIR$/res/drawable-ldpi" />
+      <recent name="$PROJECT_DIR$/res/drawable-hdpi" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="auth_engine" />
     </key>
@@ -781,14 +911,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32927504" sideWeight="0.6004273" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39957264" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39957264" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -801,7 +932,6 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24903154" sideWeight="0.6004273" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43376067" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963988" sideWeight="0.85115767" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -866,36 +996,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/XmlEngine/&quot;XmlDoc.java&quot;">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="114" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Accounts/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/XmlEngine/XmlDoc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="94" selection-start="1081" selection-end="1081" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/roster/DisplayRosterActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="38" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/roster.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="36" selection-start="391" selection-end="391" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="107" selection-start="731" selection-end="731" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="13" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" />
@@ -904,18 +1004,6 @@
     <entry file="file://$PROJECT_DIR$/res/layout/login_screen.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="52" selection-start="1835" selection-end="1835" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EncodingEngine/Base64.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="570" column="21" selection-start="26326" selection-end="26332" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AuthorizationEngine/AuthEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/Android sdk/android-sdk-linux/platforms/android-16/android.jar!/java/util/concurrent/FutureTask.class">
@@ -936,16 +1024,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/login/DisplayLoginActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/AuthorizationEngine/AuthEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="57" selection-start="1248" selection-end="1288" vertical-scroll-proportion="0.0">
+        <state line="12" column="13" selection-start="255" selection-end="255" vertical-scroll-proportion="0.32038835">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/EncodingEngine/Base64.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="570" column="21" selection-start="26326" selection-end="26332" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/auth_engine/AuthHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
+        <state line="52" column="67" selection-start="1515" selection-end="1515" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -954,13 +1047,76 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/auth_engine/AuthEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="214" column="0" selection-start="6071" selection-end="6071" vertical-scroll-proportion="0.33203885">
+        <state line="300" column="33" selection-start="8563" selection-end="8572" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#1602#1618#0" expanded="true" />
             <element signature="e#2211#2227#0" expanded="true" />
             <element signature="e#2508#2524#0" expanded="true" />
             <element signature="e#2992#3008#0" expanded="true" />
             <element signature="e#3522#3538#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/roster_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="51" selection-start="852" selection-end="852" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/login/DisplayLoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="35" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contact/Contact.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="96" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/roster.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="35" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/auth_engine/Auth_Handler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="141" selection-start="787" selection-end="787" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roster/DisplayRosterActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="30" selection-start="785" selection-end="785" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roster/contactListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="78" selection-start="2026" selection-end="2026" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roster/RosterManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="77" selection-start="446" selection-end="446" vertical-scroll-proportion="0.18446602">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#314#323#0" expanded="true" />
           </folding>
         </state>
       </provider>

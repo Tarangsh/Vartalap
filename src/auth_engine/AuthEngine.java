@@ -218,20 +218,23 @@ public class AuthEngine {
                     break;
             }while(inStream.read(inBuffer) > 0);
 
-
-
             toSrv = getAuthTag(JID,password,"PLAIN");
             pwOutStream.println(toSrv);
             Log.d("Communication To Server",toSrv);
 
-            while(inStream.read(inBuffer) > 0)
+
+            for(int i=0;i<20000;i++)
+                inBuffer[i] = 0;
+
+            inStream.read(inBuffer);
+            do
             {
                 srvInput = new String(inBuffer);
                 Log.d("Communication From Server",srvInput);
 
                 if(srvInput.contains("success"))
                     break;
-            }
+            }while(inStream.read(inBuffer) > 0);
 
 
             toSrv = getStreamTag(JID);
@@ -295,7 +298,7 @@ public class AuthEngine {
         }
         catch (Exception e)
         {
-
+            Log.d("Auth Exception",e.toString());
         }
 
         return false;

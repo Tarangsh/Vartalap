@@ -6,7 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import auth_engine.AuthHandler;
+import auth_engine.Auth_Handler;
 import com.example.R;
 
 /**
@@ -43,7 +43,10 @@ public class DisplayLoginActivity extends Activity{
              UID = ((EditText)findViewById(R.id.inputname)).getText().toString();
              password = ((EditText)findViewById(R.id.inputpwd)).getText().toString();
 
-             new AuthHandler().execute(UID,password);
+           //  new AuthHandler().execute(UID,password);
+
+             Auth_Handler t = new Auth_Handler(UID,password);
+             new Thread(t).start();
 
             /* Socket sock = new Socket("10.10.1.31",5222);
              Intent intent = new Intent(this, DisplayRosterActivity.class);
