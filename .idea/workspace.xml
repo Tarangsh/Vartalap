@@ -17,37 +17,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e8a80d2-ce2e-4752-8d0b-ef524b5b538f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/gray.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/green.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/orange.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/red.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-ldpi/gray.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-ldpi/green.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-ldpi/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-ldpi/orange.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-ldpi/red.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/gray.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/green.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/orange.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/red.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/gray.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/green.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/orange.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/red.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/roster_item.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/auth_engine/Auth_Handler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/contact/Contact.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/roster/RosterManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/roster/contactListAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Accounts/AccountsManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/example/R.java" afterPath="$PROJECT_DIR$/gen/com/example/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/roster.xml" afterPath="$PROJECT_DIR$/res/layout/roster.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/auth_engine/AuthEngine.java" afterPath="$PROJECT_DIR$/src/auth_engine/AuthEngine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/login/DisplayLoginActivity.java" afterPath="$PROJECT_DIR$/src/login/DisplayLoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/roster/DisplayRosterActivity.java" afterPath="$PROJECT_DIR$/src/roster/DisplayRosterActivity.java" />
     </list>
     <ignored path="Vartalap.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -172,17 +143,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthHandler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/auth_engine/AuthHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="67" selection-start="1515" selection-end="1515" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Auth_Handler.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/auth_engine/Auth_Handler.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -232,13 +192,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RosterManager.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RosterManager.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roster/RosterManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="77" selection-start="446" selection-end="446" vertical-scroll-proportion="0.18446602">
+            <state line="18" column="77" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#314#323#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Account.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Accounts/Account.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="13" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountsManager.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Accounts/AccountsManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="41" selection-start="512" selection-end="512" vertical-scroll-proportion="0.036764707">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#343#352#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -249,21 +230,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="15" column="96" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthEngine.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/auth_engine/AuthEngine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="300" column="33" selection-start="8563" selection-end="8572" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1602#1618#0" expanded="true" />
-                <element signature="e#2211#2227#0" expanded="true" />
-                <element signature="e#2508#2524#0" expanded="true" />
-                <element signature="e#2992#3008#0" expanded="true" />
-                <element signature="e#3522#3538#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -281,7 +247,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/AuthEngine/AuthEngine.java" />
         <option value="$PROJECT_DIR$/res/layout/accounts_screen.xml" />
         <option value="$PROJECT_DIR$/src/Login/DisplayLoginActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/login_screen.xml" />
@@ -297,14 +262,15 @@
         <option value="$PROJECT_DIR$/src/roster/DisplayRosterActivity.java" />
         <option value="$PROJECT_DIR$/src/roster/contactListAdapter.java" />
         <option value="$PROJECT_DIR$/src/roster/RosterManager.java" />
+        <option value="$PROJECT_DIR$/src/Accounts/AccountsManager.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="64" />
     <option name="y" value="-4" />
-    <option name="width" value="1857" />
-    <option name="height" value="1085" />
+    <option name="width" value="1303" />
+    <option name="height" value="773" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -910,7 +876,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
+    <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -919,7 +885,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39957264" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23717949" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -929,7 +895,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24903154" sideWeight="0.6004273" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35913807" sideWeight="0.76282054" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43376067" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -996,16 +962,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/example/MyActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/login_screen.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="52" selection-start="1835" selection-end="1835" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Android sdk/android-sdk-linux/platforms/android-16/android.jar!/java/util/concurrent/FutureTask.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1113,10 +1069,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/roster/RosterManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="77" selection-start="446" selection-end="446" vertical-scroll-proportion="0.18446602">
+        <state line="18" column="77" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#314#323#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Accounts/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Accounts/AccountsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="41" selection-start="512" selection-end="512" vertical-scroll-proportion="0.036764707">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#343#352#0" expanded="true" />
           </folding>
         </state>
       </provider>
