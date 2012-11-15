@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+    <LinearLayout android:id="@+id/uid_layout"
+                  android:layout_width="match_parent"
+                  android:layout_height="40dp">
+
+        <TextView android:id="@+id/username"
+                  android:text="username"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/inputname"
+                  android:layout_width="100dp"
+                  android:layout_height="wrap_content"/>
+     </LinearLayout>
+     <LinearLayout android:id="@+id/pwd_layout"
+                   android:layout_width="match_parent"
+                   android:layout_height="40dp">
+
+     <TextView android:id="@+id/password"
+                  android:text="password"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/inputpwd"
+                  android:layout_width="100dp"
+                  android:layout_height="wrap_content"/>
+     </LinearLayout>
+
+    <LinearLayout android:id="@+id/sub_layout"
+                   android:layout_width="match_parent"
+                   android:layout_height="50dp">
+        <Button android:id="@+id/loginbutton"
+                android:text="Sign In"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="loginClick"/>
+        <TextView android:id="@+id/status"
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>
