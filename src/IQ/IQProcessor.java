@@ -1,7 +1,6 @@
 package IQ;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.concurrent.LinkedBlockingDeque;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,7 +12,7 @@ import java.util.Queue;
 public class IQProcessor {
 
     static IQProcessor IQ_PROCESSOR = new IQProcessor();
-    static Queue<String> IQ_QUEUE = new LinkedList<String>();
+    static LinkedBlockingDeque<String> IQ_QUEUE = new LinkedBlockingDeque<String>();
 
     public static IQProcessor getInstance()
     {
@@ -22,6 +21,12 @@ public class IQProcessor {
 
     public static void pushIQPacket(String packet,int acctID)
     {
+         IQ_QUEUE.add(packet);
+    }
 
+    public void startProcessing()
+    {
+         Thread parser = new Thread(new IQParser(IQ_QUEUE));
+         parser.start();
     }
 }
