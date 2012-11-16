@@ -21,7 +21,7 @@ public class HandleIO {
         ReadStream rs;
         WriteStream ws;
         int accountID ;
-        public AccountInfo( ReadStream is , WriteStream ws , int accountID) {
+        public AccountInfo( ReadStream rs , WriteStream ws , int accountID) {
             this.rs = rs;
             this.ws = ws;
             this.accountID = accountID;
