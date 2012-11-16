@@ -12,12 +12,12 @@ import java.io.OutputStream;
  */
 public class Account {
 
-    String accountID;
+    int accountID;
     String JID;
     InputStream inStream;
     OutputStream outStream;
 
-    public Account(String aID,String jID)
+    public Account(int aID,String jID)
     {
         accountID = aID;
         JID = jID;

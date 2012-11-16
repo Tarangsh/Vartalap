@@ -16,6 +16,7 @@ public class AccountsManager {
     ArrayList<Account> accountStore = new ArrayList<Account>();
 
     static AccountsManager ACCOUNTS_MANAGER = new AccountsManager();
+    static int idTracker = 0;
 
     public AccountsManager getInstance()
     {
@@ -27,29 +28,29 @@ public class AccountsManager {
         accountStore.add(acct);
     }
 
-    public Account getAccount(String acctID)
+    public Account getAccount(int acctID)
     {
         for(Account currAcct: accountStore)
         {
-            if(currAcct.accountID.equals(acctID))
+            if(currAcct.accountID == acctID)
                 return currAcct;
         }
     }
 
-    public InputStream getInputStr(String acctID)
+    public InputStream getInputStr(int acctID)
     {
         for(Account currAcct: accountStore)
         {
-            if(currAcct.accountID.equals(acctID))
+            if(currAcct.accountID == acctID)
                 return currAcct.inStream;
         }
     }
 
-    public OutputStream getOutStr(String acctID)
+    public OutputStream getOutStr(int acctID)
     {
         for(Account currAcct: accountStore)
         {
-            if(currAcct.accountID.equals(acctID))
+            if(currAcct.accountID == acctID)
                 return currAcct.outStream;
         }
     }
