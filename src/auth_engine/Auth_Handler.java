@@ -40,6 +40,7 @@ public class Auth_Handler implements Runnable{
             CurrAccount.setPassword(Password);
 
             currID = ACCOUNTS_MANAGER.addAccount(CurrAccount);
+            ACCOUNTS_MANAGER.getAccount(currID).login();
 
 
 

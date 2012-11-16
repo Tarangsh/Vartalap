@@ -18,7 +18,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6e8a80d2-ce2e-4752-8d0b-ef524b5b538f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Accounts/Account.java" afterPath="$PROJECT_DIR$/src/Accounts/Account.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Accounts/AccountsManager.java" afterPath="$PROJECT_DIR$/src/Accounts/AccountsManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/auth_engine/AuthEngine.java" afterPath="$PROJECT_DIR$/src/auth_engine/AuthEngine.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/auth_engine/AuthHandler.java" afterPath="$PROJECT_DIR$/src/auth_engine/AuthHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/auth_engine/Auth_Handler.java" afterPath="$PROJECT_DIR$/src/auth_engine/Auth_Handler.java" />
     </list>
     <ignored path="Vartalap.iws" />
@@ -51,7 +52,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/auth_engine/AuthEngine.java" line="228" class="auth_engine.AuthEngine" package="auth_engine">
+      <breakpoint url="file://$PROJECT_DIR$/src/auth_engine/AuthEngine.java" line="241" class="auth_engine.AuthEngine" package="auth_engine">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -64,7 +65,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/auth_engine/AuthEngine.java" line="298" class="auth_engine.AuthEngine" package="auth_engine">
+      <breakpoint url="file://$PROJECT_DIR$/src/auth_engine/AuthEngine.java" line="311" class="auth_engine.AuthEngine" package="auth_engine">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -79,7 +80,7 @@
       </breakpoint>
     </line_breakpoints>
     <method_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/auth_engine/AuthEngine.java" line="131" class="auth_engine.AuthEngine" package="auth_engine">
+      <breakpoint url="file://$PROJECT_DIR$/src/auth_engine/AuthEngine.java" line="132" class="auth_engine.AuthEngine" package="auth_engine">
         <option name="WATCH_ENTRY" value="true" />
         <option name="WATCH_EXIT" value="true" />
         <option name="ENABLED" value="true" />
@@ -147,7 +148,7 @@
       <file leaf-file-name="Auth_Handler.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/auth_engine/Auth_Handler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="92" selection-start="1042" selection-end="1042" vertical-scroll-proportion="0.0">
+            <state line="36" column="39" selection-start="685" selection-end="928" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -199,8 +200,19 @@
       <file leaf-file-name="Account.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Accounts/Account.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="25" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0">
+            <state line="79" column="22" selection-start="1275" selection-end="1275" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthHandler.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/auth_engine/AuthHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="12" selection-start="897" selection-end="897" vertical-scroll-proportion="0.6226138">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -208,29 +220,26 @@
       <file leaf-file-name="AuthEngine.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/auth_engine/AuthEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="300" column="33" selection-start="8563" selection-end="8572" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountsManager.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Accounts/AccountsManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="38" selection-start="1110" selection-end="1110" vertical-scroll-proportion="1.0352423">
+            <state line="206" column="82" selection-start="5973" selection-end="5973" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#343#352#0" expanded="true" />
+                <element signature="e#1636#1652#0" expanded="true" />
+                <element signature="e#2245#2261#0" expanded="true" />
+                <element signature="e#2542#2558#0" expanded="true" />
+                <element signature="e#3026#3042#0" expanded="true" />
+                <element signature="e#3556#3572#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Contact.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/contact/Contact.java">
+      <file leaf-file-name="AccountsManager.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Accounts/AccountsManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="96" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="50" column="88" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#343#352#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -252,18 +261,18 @@
         <option value="$PROJECT_DIR$/res/layout/login_screen.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/SocketManager/ChatSocket.java" />
-        <option value="$PROJECT_DIR$/src/auth_engine/AuthHandler.java" />
         <option value="$PROJECT_DIR$/src/login/DisplayLoginActivity.java" />
-        <option value="$PROJECT_DIR$/src/auth_engine/AuthEngine.java" />
         <option value="$PROJECT_DIR$/res/layout/roster_item.xml" />
         <option value="$PROJECT_DIR$/res/layout/roster.xml" />
         <option value="$PROJECT_DIR$/src/contact/Contact.java" />
         <option value="$PROJECT_DIR$/src/roster/DisplayRosterActivity.java" />
         <option value="$PROJECT_DIR$/src/roster/contactListAdapter.java" />
         <option value="$PROJECT_DIR$/src/roster/RosterManager.java" />
-        <option value="$PROJECT_DIR$/src/Accounts/Account.java" />
-        <option value="$PROJECT_DIR$/src/auth_engine/Auth_Handler.java" />
         <option value="$PROJECT_DIR$/src/Accounts/AccountsManager.java" />
+        <option value="$PROJECT_DIR$/src/auth_engine/Auth_Handler.java" />
+        <option value="$PROJECT_DIR$/src/auth_engine/AuthEngine.java" />
+        <option value="$PROJECT_DIR$/src/Accounts/Account.java" />
+        <option value="$PROJECT_DIR$/src/auth_engine/AuthHandler.java" />
       </list>
     </option>
   </component>
@@ -897,7 +906,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24903154" sideWeight="0.7777778" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22222222" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22222222" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -993,15 +1002,6 @@
         <state line="570" column="21" selection-start="26326" selection-end="26332" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/auth_engine/AuthHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="67" selection-start="1515" selection-end="1515" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/roster_item.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="51" selection-start="852" selection-end="852" vertical-scroll-proportion="0.0">
@@ -1046,13 +1046,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/auth_engine/AuthEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="300" column="33" selection-start="8563" selection-end="8572" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/roster/RosterManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="77" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0">
@@ -1063,28 +1056,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Accounts/AccountsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="88" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#343#352#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/auth_engine/Auth_Handler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="92" selection-start="1042" selection-end="1042" vertical-scroll-proportion="0.0">
+        <state line="36" column="39" selection-start="685" selection-end="928" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/auth_engine/AuthEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="206" column="82" selection-start="5973" selection-end="5973" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1636#1652#0" expanded="true" />
+            <element signature="e#2245#2261#0" expanded="true" />
+            <element signature="e#2542#2558#0" expanded="true" />
+            <element signature="e#3026#3042#0" expanded="true" />
+            <element signature="e#3556#3572#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Accounts/Account.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="25" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0">
+        <state line="79" column="22" selection-start="1275" selection-end="1275" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Accounts/AccountsManager.java">
+    <entry file="file://$PROJECT_DIR$/src/auth_engine/AuthHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="38" selection-start="1110" selection-end="1110" vertical-scroll-proportion="1.0352423">
+        <state line="34" column="12" selection-start="897" selection-end="897" vertical-scroll-proportion="0.6226138">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#343#352#0" expanded="true" />
           </folding>
         </state>
       </provider>

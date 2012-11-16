@@ -6,6 +6,8 @@ package auth_engine;
 
 //import EncodingEngine.Base64;
 
+import Accounts.Account;
+import Accounts.AccountsManager;
 import XmlEngine.XmlDoc;
 import android.util.Base64;
 import android.util.Log;
@@ -13,7 +15,6 @@ import android.util.Log;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
-import java.net.Socket;
 import java.util.HashMap;
 
 /**
@@ -129,10 +130,18 @@ public class AuthEngine {
         return reqRosterTag.getDocument();
     }
 
-    public boolean pingpongAuth(InputStream inStream, OutputStream outStream,String JID,String password)
+    public boolean pingpongAuth(int acctID)
     {
         try
         {
+            AccountsManager ACCOUNTS_MANAGER = AccountsManager.getInstance();
+            Account currAccount = ACCOUNTS_MANAGER.getAccount(acctID);
+            InputStream inStream = currAccount.getInputStr();
+            OutputStream outStream = currAccount.getOutputStr();
+            String JID = currAccount.getJID();
+            String password = currAccount.getPassword();
+
+
             PrintWriter pwOutStream = new PrintWriter(outStream,true);
             String srvInput;
             String toSrv;
@@ -191,12 +200,16 @@ public class AuthEngine {
 
 
 
-    public boolean gtalkAuth(Socket Socket,String JID,String password)
+    public boolean gtalkAuth(int acctID)
     {
         try
         {
-            InputStream inStream = Socket.getInputStream();
-            OutputStream outStream = Socket.getOutputStream();
+            AccountsManager ACCOUNTS_MANAGER = AccountsManager.getInstance();
+            Account currAccount = ACCOUNTS_MANAGER.getAccount(acctID);
+            InputStream inStream = currAccount.getInputStr();
+            OutputStream outStream = currAccount.getOutputStr();
+            String JID = currAccount.getJID();
+            String password = currAccount.getPassword();
 
             PrintWriter pwOutStream = new PrintWriter(outStream,true);
             String srvInput;

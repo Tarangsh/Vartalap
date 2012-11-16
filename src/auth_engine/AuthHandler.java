@@ -32,7 +32,7 @@ public class AuthHandler extends AsyncTask<String,Long,String> {
             socket.setSoTimeout(0);
             socket.setKeepAlive(true);
 
-            AUTHENGINE.gtalkAuth(socket,Params[0],Params[1]);
+          //  AUTHENGINE.gtalkAuth(socket,Params[0],Params[1]);
             //AUTHENGINE.gtalkAuth(socket.getInputStream(),socket.getOutputStream(),Params[0],Params[1]);
          //   AUTHENGINE.pingpongAuth(socket.getInputStream(),socket.getOutputStream(),Params[0],Params[1]);
 
