@@ -36,9 +36,11 @@ public class HandleIO {
         InputStream is = AccountsManager.getInstance().getInputStr(accountID);
         OutputStream os =  AccountsManager.getInstance().getOutStr(accountID);
         ReadStream rs = new ReadStream(is,accountID);
-        rs.run();
+        Thread t1 = new Thread(rs);
+        t1.start();
         WriteStream ws = new WriteStream(os,accountID);
-        ws.run();
+        Thread t2 = new Thread(ws);
+        t2.start();
         accounts.add(mainObject.new AccountInfo(rs,ws,accountID));
         // start a thread each for is and os.
     }
