@@ -27,5 +27,12 @@
                     android:value="Log.DisplayLoginActivity"/>
 
         </activity>
+        <activity
+                android:name="message.MessageActivity"
+                android:label="MessageActivity" >
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="Log.DisplayRosterActivity" />
+        </activity>
     </application>
 </manifest>

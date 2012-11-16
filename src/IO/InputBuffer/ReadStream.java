@@ -1,9 +1,8 @@
 package IO.InputBuffer;
 
-import Message.IncomingMessage;
+import message.IncomingMessage;
 import Presence.SetContactPresence;
 import android.util.Log;
-import auth_engine.AuthEngine;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.xml.sax.SAXException;
@@ -22,7 +21,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.PushbackInputStream;
 import java.io.StringWriter;
-import java.util.InputMismatchException;
 
 /**
  * Created with IntelliJ IDEA.
@@ -92,17 +90,5 @@ public class ReadStream implements  Runnable {
                 Log.d(LOGTAG,"IO Exception ");
             }
         }
-        // do polling
-        //if(is.available())
-        /*
-       call 1 :
-       auth_engine : AuthEngine.pushAuthPacket(xml,accountID) ;
-       call 2 :
-       Roster : RosterManager.pushRosterPacket(xml,accountID);
-       call 3 :
-       Presence : SetContactPresence.pushPresencePacket(xml,accountID);
-       call 4 :
-       Message : IncomingMessage.pushMessagePacket(xml,accountID);
-        */
     }
 }

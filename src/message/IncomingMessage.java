@@ -1,4 +1,4 @@
-package Message;
+package message;
 
 /**
  * Created with IntelliJ IDEA.
@@ -10,7 +10,7 @@ package Message;
 public class IncomingMessage {
 
     public static void pushMessagePacket(String xml , int accountID) {
-         // update chat activity
+         // update message activity
         // display notification
 
     }

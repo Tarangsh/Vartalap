@@ -9,6 +9,6 @@ package Presence;
  */
 public class SetMyPresence {
     public static void setPresence ( Presence presence , int accountID) {
-
+         // make a presence stanza and call HandleIO.sendPacket(..)
     }
 }
