@@ -40,4 +40,9 @@ public class RosterManager {
         //insert in the list from here
     }
 
+    public void updatePresence(String jid)
+    {
+
+    }
+
 }

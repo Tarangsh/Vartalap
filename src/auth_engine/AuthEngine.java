@@ -8,6 +8,7 @@ package auth_engine;
 
 import Accounts.Account;
 import Accounts.AccountsManager;
+import IO.HandleIO;
 import XmlEngine.XmlDoc;
 import android.util.Base64;
 import android.util.Log;
@@ -148,10 +149,11 @@ public class AuthEngine {
 
             toSrv = getStreamTag(JID);
 
-            pwOutStream.println(toSrv);
+           // pwOutStream.println(toSrv);
+            HandleIO.sendPacket(toSrv,acctID);
             Log.d("ToServer",toSrv);
 
-            while(inStream.read(inBuffer) > 0)
+         /*   while(inStream.read(inBuffer) > 0)
             {
                 srvInput = new String(inBuffer);
                 Log.d("FromServer",srvInput);
@@ -159,13 +161,14 @@ public class AuthEngine {
                 if(srvInput.contains("features"))
                     break;
             }
-
+           */
 
             toSrv = getAuthTag(JID,password,"PLAIN");
-            pwOutStream.println(toSrv);
+            //pwOutStream.println(toSrv);
+            HandleIO.sendPacket(toSrv,acctID);
             Log.d("ToServer",toSrv);
 
-            while(inStream.read(inBuffer) > 0)
+            /*while(inStream.read(inBuffer) > 0)
             {
                 srvInput = new String(inBuffer);
                 Log.d("FromServer",srvInput);
@@ -173,12 +176,13 @@ public class AuthEngine {
                 if(srvInput.contains("success"))
                     break;
             }
-
+              */
             toSrv = getBindTag();
 
-            pwOutStream.println(toSrv);
+            //pwOutStream.println(toSrv);
+            HandleIO.sendPacket(toSrv,acctID);
             Log.d("ToServer",toSrv);
-
+            /*
             while(inStream.read(inBuffer) > 0)
             {
                 srvInput = new String(inBuffer);
@@ -187,7 +191,7 @@ public class AuthEngine {
                 if(srvInput.contains("jid"))
                     return true;
             }
-
+              */
 
         }
         catch (Exception e)
@@ -218,9 +222,10 @@ public class AuthEngine {
 
             toSrv = getStreamTag(JID);
 
-            pwOutStream.println(toSrv);
+            //pwOutStream.println(toSrv);
+            HandleIO.sendPacket(toSrv,acctID);
             Log.d("Communication To Server",toSrv);
-
+            /*
             inStream.read(inBuffer);
             do
             {
@@ -230,15 +235,12 @@ public class AuthEngine {
                 if(srvInput.contains("features"))
                     break;
             }while(inStream.read(inBuffer) > 0);
-
+             */
             toSrv = getAuthTag(JID,password,"PLAIN");
-            pwOutStream.println(toSrv);
+            //pwOutStream.println(toSrv);
+            HandleIO.sendPacket(toSrv,acctID);
             Log.d("Communication To Server",toSrv);
-
-
-            for(int i=0;i<20000;i++)
-                inBuffer[i] = 0;
-
+             /*
             inStream.read(inBuffer);
             do
             {
@@ -249,12 +251,13 @@ public class AuthEngine {
                     break;
             }while(inStream.read(inBuffer) > 0);
 
-
+               */
             toSrv = getStreamTag(JID);
 
-            pwOutStream.println(toSrv);
+            //pwOutStream.println(toSrv);
+            HandleIO.sendPacket(toSrv,acctID);
             Log.d("Communication To Server",toSrv);
-
+            /*
             while(inStream.read(inBuffer) > 0)
             {
                 srvInput = new String(inBuffer);
@@ -263,7 +266,8 @@ public class AuthEngine {
                 if(srvInput.contains("features"))
                     break;
             }
-
+              */
+            /*
             toSrv = getBindTag();
 
             pwOutStream.println(toSrv);
@@ -306,7 +310,7 @@ public class AuthEngine {
                 //  if(srvInput.contains("/iq>"))
                 //    break;
             }
-
+              */
 
         }
         catch (Exception e)

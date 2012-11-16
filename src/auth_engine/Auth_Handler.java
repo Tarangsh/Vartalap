@@ -14,6 +14,7 @@ import android.util.Log;
 public class Auth_Handler implements Runnable{
     String JID;
     String Password;
+    //AuthEngine AUTHENGINE = AuthEngine.getInstance();
 
     public Auth_Handler(String jid, String pwd)
     {
@@ -25,7 +26,6 @@ public class Auth_Handler implements Runnable{
     {
         try
         {
-            //AuthEngine AUTHENGINE = AuthEngine.getInstance();
             AccountsManager ACCOUNTS_MANAGER = AccountsManager.getInstance();
             int currID;
 
