@@ -1,6 +1,5 @@
 package IO;
 
-import Accounts.Account;
 import Accounts.AccountsManager;
 import IO.InputBuffer.ReadStream;
 import IO.OutputQueue.WriteStream;
@@ -36,9 +35,9 @@ public class HandleIO {
     public static void trackAccount(int accountID) {
         InputStream is = AccountsManager.getInstance().getInputStr(accountID);
         OutputStream os =  AccountsManager.getInstance().getOutStr(accountID);
-        ReadStream rs = new ReadStream(is);
+        ReadStream rs = new ReadStream(is,accountID);
         rs.run();
-        WriteStream ws = new WriteStream(os);
+        WriteStream ws = new WriteStream(os,accountID);
         ws.run();
         accounts.add(mainObject.new AccountInfo(rs,ws,accountID));
         // start a thread each for is and os.
