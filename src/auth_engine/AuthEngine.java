@@ -317,6 +317,11 @@ public class AuthEngine {
         return false;
     }
 
+    public static void pushAuthPacket(String packet, int AcctID)
+    {
+
+    }
+
 
 
 }
