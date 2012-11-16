@@ -1,10 +1,8 @@
 package auth_engine;
 
 import Accounts.Account;
+import Accounts.AccountsManager;
 import android.util.Log;
-
-import javax.net.ssl.SSLSocketFactory;
-import java.net.Socket;
 
 /**
  * Created with IntelliJ IDEA.
@@ -27,15 +25,23 @@ public class Auth_Handler implements Runnable{
     {
         try
         {
-            AuthEngine AUTHENGINE = AuthEngine.getInstance();
+            //AuthEngine AUTHENGINE = AuthEngine.getInstance();
+            AccountsManager ACCOUNTS_MANAGER = AccountsManager.getInstance();
+            int currID;
 
-            SSLSocketFactory sslSocketFactory = (SSLSocketFactory) SSLSocketFactory.getDefault();
+
+
+          /*  SSLSocketFactory sslSocketFactory = (SSLSocketFactory) SSLSocketFactory.getDefault();
             Socket socket = sslSocketFactory.createSocket("talk.google.com",5223);
             socket.setSoTimeout(0);
             socket.setKeepAlive(true);
+            */
+            Account CurrAccount = new Account(JID);
+            CurrAccount.setPassword(Password);
 
-            Account CurrAccount = new Account("JID");
-            //CurrAccount.s
+            currID = ACCOUNTS_MANAGER.addAccount(CurrAccount);
+
+
 
            // AUTHENGINE.gtalkAuth(socket,JID,Password);
             //AUTHENGINE.gtalkAuth(socket.getInputStream(),socket.getOutputStream(),Params[0],Params[1]);

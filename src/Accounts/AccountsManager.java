@@ -18,15 +18,20 @@ public class AccountsManager {
     static AccountsManager ACCOUNTS_MANAGER = new AccountsManager();
     static int idTracker = 0;
 
-    public AccountsManager getInstance()
+    private AccountsManager()
+    {}
+
+    public static AccountsManager getInstance()
     {
         return ACCOUNTS_MANAGER;
     }
 
-    public void addAccount(Account acct)
+    public int addAccount(Account acct)
     {
         acct.setAccountID(idTracker++);
         accountStore.add(acct);
+
+        return(acct.getAccountID());
     }
 
     public Account getAccount(int acctID)
@@ -34,6 +39,16 @@ public class AccountsManager {
         for(Account currAcct: accountStore)
         {
             if(currAcct.accountID == acctID)
+                return currAcct;
+        }
+        return null;
+    }
+
+    public Account getAccount(String jid)
+    {
+        for(Account currAcct: accountStore)
+        {
+            if(currAcct.JID.equals(jid))
                 return currAcct;
         }
         return null;

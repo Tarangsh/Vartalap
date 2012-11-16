@@ -26,6 +26,7 @@ public class Account {
     public Account(String jID)
     {
         JID = jID;
+        accountID = -1;
     }
 
     public void setAccountID(int aid)
@@ -53,5 +54,10 @@ public class Account {
         {
 
         }
+    }
+
+    public int getAccountID()
+    {
+        return accountID;
     }
 }
