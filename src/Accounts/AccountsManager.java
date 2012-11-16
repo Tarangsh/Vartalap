@@ -25,6 +25,7 @@ public class AccountsManager {
 
     public void addAccount(Account acct)
     {
+        acct.setAccountID(idTracker++);
         accountStore.add(acct);
     }
 
@@ -35,6 +36,7 @@ public class AccountsManager {
             if(currAcct.accountID == acctID)
                 return currAcct;
         }
+        return null;
     }
 
     public InputStream getInputStr(int acctID)
@@ -44,6 +46,7 @@ public class AccountsManager {
             if(currAcct.accountID == acctID)
                 return currAcct.inStream;
         }
+        return null;
     }
 
     public OutputStream getOutStr(int acctID)
@@ -53,6 +56,7 @@ public class AccountsManager {
             if(currAcct.accountID == acctID)
                 return currAcct.outStream;
         }
+        return null;
     }
 
 }

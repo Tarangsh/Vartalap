@@ -1,5 +1,6 @@
 package auth_engine;
 
+import Accounts.Account;
 import android.util.Log;
 
 import javax.net.ssl.SSLSocketFactory;
@@ -33,7 +34,10 @@ public class Auth_Handler implements Runnable{
             socket.setSoTimeout(0);
             socket.setKeepAlive(true);
 
-            AUTHENGINE.gtalkAuth(socket,JID,Password);
+            Account CurrAccount = new Account("JID");
+            //CurrAccount.s
+
+           // AUTHENGINE.gtalkAuth(socket,JID,Password);
             //AUTHENGINE.gtalkAuth(socket.getInputStream(),socket.getOutputStream(),Params[0],Params[1]);
             //   AUTHENGINE.pingpongAuth(socket.getInputStream(),socket.getOutputStream(),Params[0],Params[1]);
         }
