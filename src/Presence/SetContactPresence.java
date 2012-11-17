@@ -12,5 +12,6 @@ public class SetContactPresence {
     public static  void pushPresencePacket(String xml , int accountID) {
         // call something in roster .
         // display notification.
+        // RosterManager.updatePresence(jid,presence);
     }
 }

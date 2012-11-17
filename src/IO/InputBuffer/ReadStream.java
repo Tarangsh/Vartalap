@@ -3,24 +3,11 @@ package IO.InputBuffer;
 import message.IncomingMessage;
 import Presence.SetContactPresence;
 import android.util.Log;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.xml.sax.SAXException;
 import IQ.IQProcessor;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.PushbackInputStream;
-import java.io.StringWriter;
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+import org.xmlpull.v1.XmlPullParserFactory;
+import java.io.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -42,53 +29,63 @@ public class ReadStream implements  Runnable {
 
     public void run() {
         while(true) {
-            PushbackInputStream pbis = new PushbackInputStream(is);
             try {
-                int r = pbis.read();
-                if(r==-1) {
-                    pbis.unread(-1);
-                    try {
-                        Thread.sleep(10);
-                    } catch ( InterruptedException ie) {
-                        Log.d(LOGTAG,"Interrupted exception");
+                BufferedReader br = new BufferedReader(new InputStreamReader(is));
+                String xml = br.readLine();
+                StringReader stringReader = new StringReader(xml);
+                XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+                factory.setNamespaceAware(true);
+                XmlPullParser pullParser = factory.newPullParser();
+                pullParser.setInput(stringReader);
+                int eventType = pullParser.getEventType();
+                String tag = "default";
+                int empty = 0;
+                boolean done = false;
+                while(eventType!= XmlPullParser.END_DOCUMENT) {
+                    empty++;
+                    if( (eventType == XmlPullParser.START_TAG) && (!done)){
+                        tag = pullParser.getName();
+                        Log.d(LOGTAG,"got tag " );
+                        Log.d(LOGTAG,"The tag is " );
+                        Log.d(LOGTAG,tag);
+                        done = true;
                     }
-                }  else {
-                    pbis.unread(r);
-                    DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+                    eventType = pullParser.next();
+                }
+                if(empty <= 1) {
                     try {
-                        DocumentBuilder db = dbf.newDocumentBuilder();
-                        Document d = db.parse(is);
-                        Element e = d.getDocumentElement();
-                        String tag = e.getTagName();
-                        DOMSource source = new DOMSource(d);
-                        StringWriter stringWriter = new StringWriter();
-                        TransformerFactory transformerFactory = TransformerFactory.newInstance();
-                        Transformer transformer = transformerFactory.newTransformer();
-                        transformer.transform(source, new StreamResult(stringWriter));
-                        String xml = stringWriter.toString();
-                        /*
-                                AuthEngine.pushAuthPacket(
-                                */
-                        if(tag.equalsIgnoreCase("presence")){
-                            SetContactPresence.pushPresencePacket(xml,accountID);
-                        } else if ( tag.equalsIgnoreCase("message")) {
-                            IncomingMessage.pushMessagePacket(xml,accountID);
-                        } else if (tag.equalsIgnoreCase("iq"))  {
-                            IQProcessor.pushIQPacket(xml,accountID);
-                        }
-                    } catch ( ParserConfigurationException pce ) {
-                        Log.d(LOGTAG , "Parser Configuration Exception ");
-                    } catch ( SAXException saxe) {
-                        Log.d(LOGTAG , "SAX Exception ");
-                    } catch ( TransformerConfigurationException tce) {
-                        Log.d(LOGTAG,"Transformer Configuration Exception");
-                    } catch ( TransformerException te) {
-                        Log.d(LOGTAG,"Transformer Exception");
+                    Thread.sleep(10);
+                    } catch (InterruptedException ie) {
+                        Log.d(LOGTAG,"Interrupted Exception " + ie.toString());
                     }
                 }
-            } catch (IOException ioe) {
-                Log.d(LOGTAG,"IO Exception ");
+                if(tag.equalsIgnoreCase("presence")){
+                    SetContactPresence.pushPresencePacket(xml,accountID);
+                } else if ( tag.equalsIgnoreCase("message")) {
+                    IncomingMessage.pushMessagePacket(xml,accountID);
+                } else {
+                    IQProcessor.pushPacket(xml, accountID);
+                    //Log.d(LOGTAG,"calling relevant method with xml");
+                    //Log.d(LOGTAG,xml);
+                }
+            } catch ( XmlPullParserException xppe) {
+                Log.d(LOGTAG,"XmlPullParserException : " + xppe.toString());
+            } catch ( IOException ioe) {
+                Log.d(LOGTAG,"IOException : " + ioe.toString());
             }
+            /*
+ } catch ( ParserConfigurationException pce ) {
+     Log.d(LOGTAG , "Parser Configuration Exception : " + pce.toString());
+ } catch ( SAXException saxe) {
+     Log.d(LOGTAG , "SAX Exception : " + saxe.toString());
+ } catch ( TransformerConfigurationException tce) {
+     Log.d(LOGTAG,"Transformer Configuration Exception : " + tce.toString());
+ } catch ( TransformerException te) {
+     Log.d(LOGTAG,"Transformer Exception : " + te.toString());
+ } catch (IOException ioe) {
+     Log.d(LOGTAG,"IO Exception ");
+ }
+            */
         }
     }
 }
