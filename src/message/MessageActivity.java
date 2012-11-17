@@ -23,6 +23,7 @@ public class MessageActivity extends Activity implements View.OnClickListener {
 
     String message;
     int accountID;
+    String to;
     private static final String LOGTAG = "MessageActivity";
 
     public void onCreate(Bundle savedInstanceState) {
@@ -32,11 +33,11 @@ public class MessageActivity extends Activity implements View.OnClickListener {
         sendButton.setOnClickListener(this);
         Intent intent = getIntent();
         accountID = intent.getIntExtra(SendActivity.ACCOUNT_ID,-1);
-        message = intent.getStringExtra(SendActivity.TO);
+        to = intent.getStringExtra(SendActivity.TO);
     }
 
     public void onClick(View view ) {
-        String xml = MakeMessageStanza.getMessageStanza(message,accountID);
+        String xml = MakeMessageStanza.getMessageStanza(message,accountID,to);
         try {
             HandleIO.sendPacket(xml,accountID);
         } catch (UntrackedAccountException uae) {

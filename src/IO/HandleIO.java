@@ -3,6 +3,8 @@ package IO;
 import Accounts.AccountsManager;
 import IO.InputBuffer.ReadStream;
 import IO.OutputQueue.WriteStream;
+import android.util.Log;
+import message.MakeMessageStanza;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -27,6 +29,8 @@ public class HandleIO {
             this.accountID = accountID;
         }
     }
+
+    private static final String LOGTAG = "HandleIO";
 
     private static ArrayList<AccountInfo> accounts = new ArrayList<AccountInfo>();
 

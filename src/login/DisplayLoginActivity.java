@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import auth_engine.Auth_Handler;
 import com.example.R;
+import message.MakeMessageStanza;
 
 /**
  * Created with IntelliJ IDEA.

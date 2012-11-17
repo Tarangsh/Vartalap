@@ -32,60 +32,46 @@ public class ReadStream implements  Runnable {
             try {
                 BufferedReader br = new BufferedReader(new InputStreamReader(is));
                 String xml = br.readLine();
-                StringReader stringReader = new StringReader(xml);
-                XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
-                factory.setNamespaceAware(true);
-                XmlPullParser pullParser = factory.newPullParser();
-                pullParser.setInput(stringReader);
-                int eventType = pullParser.getEventType();
-                String tag = "default";
-                int empty = 0;
-                boolean done = false;
-                while(eventType!= XmlPullParser.END_DOCUMENT) {
-                    empty++;
-                    if( (eventType == XmlPullParser.START_TAG) && (!done)){
-                        tag = pullParser.getName();
-                        Log.d(LOGTAG,"got tag " );
-                        Log.d(LOGTAG,"The tag is " );
-                        Log.d(LOGTAG,tag);
-                        done = true;
+                if(xml != null) {
+                    StringReader stringReader = new StringReader(xml);
+                    XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+                    factory.setNamespaceAware(true);
+                    XmlPullParser pullParser = factory.newPullParser();
+                    pullParser.setInput(stringReader);
+                    int eventType = pullParser.getEventType();
+                    String tag = "default";
+                    boolean done = false;
+                    while(eventType!= XmlPullParser.END_DOCUMENT) {
+                        if( (eventType == XmlPullParser.START_TAG) && (!done)){
+                            tag = pullParser.getName();
+                            Log.d(LOGTAG,"got tag " );
+                            Log.d(LOGTAG,"The tag is " );
+                            Log.d(LOGTAG,tag);
+                            done = true;
+                        }
+                        eventType = pullParser.next();
                     }
-                    eventType = pullParser.next();
-                }
-                if(empty <= 1) {
+                    if(tag.equalsIgnoreCase("presence")){
+                        SetContactPresence.pushPresencePacket(xml,accountID);
+                    } else if ( tag.equalsIgnoreCase("message")) {
+                        IncomingMessage.pushMessagePacket(xml,accountID);
+                    } else {
+                        IQProcessor.pushPacket(xml, accountID);
+                        //Log.d(LOGTAG,"calling relevant method with xml");
+                        //Log.d(LOGTAG,xml);
+                    }
+                } else {
                     try {
-                    Thread.sleep(10);
+                        Thread.sleep(10);
                     } catch (InterruptedException ie) {
                         Log.d(LOGTAG,"Interrupted Exception " + ie.toString());
                     }
-                }
-                if(tag.equalsIgnoreCase("presence")){
-                    SetContactPresence.pushPresencePacket(xml,accountID);
-                } else if ( tag.equalsIgnoreCase("message")) {
-                    IncomingMessage.pushMessagePacket(xml,accountID);
-                } else {
-                    IQProcessor.pushPacket(xml, accountID);
-                    //Log.d(LOGTAG,"calling relevant method with xml");
-                    //Log.d(LOGTAG,xml);
                 }
             } catch ( XmlPullParserException xppe) {
                 Log.d(LOGTAG,"XmlPullParserException : " + xppe.toString());
             } catch ( IOException ioe) {
                 Log.d(LOGTAG,"IOException : " + ioe.toString());
             }
-            /*
- } catch ( ParserConfigurationException pce ) {
-     Log.d(LOGTAG , "Parser Configuration Exception : " + pce.toString());
- } catch ( SAXException saxe) {
-     Log.d(LOGTAG , "SAX Exception : " + saxe.toString());
- } catch ( TransformerConfigurationException tce) {
-     Log.d(LOGTAG,"Transformer Configuration Exception : " + tce.toString());
- } catch ( TransformerException te) {
-     Log.d(LOGTAG,"Transformer Exception : " + te.toString());
- } catch (IOException ioe) {
-     Log.d(LOGTAG,"IO Exception ");
- }
-            */
         }
     }
 }
