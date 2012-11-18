@@ -16,7 +16,7 @@
     </LinearLayout>
     <LinearLayout android:id="@+id/pwd_layout"
                   android:layout_width="match_parent"
-                  android:layout_height="40dp">
+                  android:layout_height="400dp">
 
         <TextView android:id="@+id/prevMessages"
                   android:text="prevMessages"

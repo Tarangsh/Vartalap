@@ -1,7 +1,12 @@
 package message;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.IBinder;
+import login.GlobalContext;
+
+import java.util.ArrayList;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,13 +19,33 @@ public class SendActivity {
 
     public static final String TO = "To";
     public static final String ACCOUNT_ID = "ACCOUNT_ID" ;
+    private  static  ArrayList<MessageActivityData> chats = new ArrayList<MessageActivityData>();
 
-    public static void startChat(Context context , int accountID , String to) {
-        Intent intent = new Intent(context,MessageActivity.class);
-        intent.putExtra(TO,to);
-        intent.putExtra(ACCOUNT_ID,accountID);
-        context.startActivity(intent);
-        // prevent multiple instances when user does back and clicks the same roster item again .
+    public static void startChat(int accountID , String to) {
+        MessageActivityData activityData = getMessageActivityData(accountID, to);
+        if(activityData == null) {
+            MessageActivityData mData = new MessageActivityData();
+            mData.from = to;
+            mData.accountID = accountID;
+            mData.message = "";
+            activityData = mData;
+            chats.add(mData);
+        }
+        MessageActivity.setActivityData(activityData);
+        Intent intent = new Intent(GlobalContext.getContext(),MessageActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        GlobalContext.getContext().startActivity(intent);
+    }
+
+    public static MessageActivityData getMessageActivityData(int accountID , String from) {
+        MessageActivityData activityData = null;
+        for(int i = 0 ; i < chats.size() ; i++) {
+            if(chats.get(i).from.equalsIgnoreCase(from) && chats.get(i).accountID.equals(accountID)) {
+                activityData = chats.get(i);
+                break;
+            }
+        }
+        return  activityData;
     }
 
 }
