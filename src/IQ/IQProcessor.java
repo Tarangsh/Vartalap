@@ -12,16 +12,18 @@ import java.util.concurrent.LinkedBlockingDeque;
 public class IQProcessor {
 
     static IQProcessor IQ_PROCESSOR = new IQProcessor();
-    static LinkedBlockingDeque<String> IQ_QUEUE = new LinkedBlockingDeque<String>();
+    static LinkedBlockingDeque<QueueElem> IQ_QUEUE = new LinkedBlockingDeque<QueueElem>();
 
     public static IQProcessor getInstance()
     {
         return IQ_PROCESSOR;
     }
 
-    public static void pushIQPacket(String packet,int acctID)
+
+    public static void pushPacket(String packet,int acctID)
     {
-         IQ_QUEUE.add(packet);
+        QueueElem E = new QueueElem(packet,acctID);
+        IQ_QUEUE.add(E);
     }
 
     public void startProcessing()

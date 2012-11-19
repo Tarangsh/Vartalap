@@ -84,11 +84,14 @@ public class Account {
 
     public void login()
     {
+        Log.d("Vartalap","Login Clicked");
         try
         {
             SSLSocketFactory sslSocketFactory = (SSLSocketFactory) SSLSocketFactory.getDefault();
             if(JID.contains("gmail"))
             {
+                Log.d("Vartalap","Gtalk Auth");
+
                 Socket socket = sslSocketFactory.createSocket("talk.google.com",5223);
                 socket.setSoTimeout(0);
                 socket.setKeepAlive(true);
@@ -106,6 +109,7 @@ public class Account {
             }
             else
             {
+                Log.d("Vartalap","pingpong auth");
                // Socket socket = new Socket("10.10.1.31",5222);
                 sslSocketFactory.createSocket("10.10.1.31",5222);
                 socket.setSoTimeout(0);

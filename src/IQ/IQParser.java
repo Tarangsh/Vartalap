@@ -1,10 +1,12 @@
 package IQ;
 
 import android.util.Log;
+import auth_engine.AuthEngine;
 import org.w3c.dom.Document;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import java.util.HashMap;
 import java.util.concurrent.LinkedBlockingDeque;
 
 /**
@@ -17,9 +19,9 @@ import java.util.concurrent.LinkedBlockingDeque;
 public class IQParser implements Runnable {
 
     DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-    LinkedBlockingDeque<String> packetQueue;
+    LinkedBlockingDeque<QueueElem> packetQueue;
 
-    public IQParser(LinkedBlockingDeque<String> IQ_QUEUE)
+    public IQParser(LinkedBlockingDeque<QueueElem> IQ_QUEUE)
     {
             packetQueue = IQ_QUEUE;
     }
@@ -28,18 +30,36 @@ public class IQParser implements Runnable {
     {
         try
         {
-        String currPacket;
-        DocumentBuilder db = dbf.newDocumentBuilder();
-        Document dom;
+            QueueElem currElem;
+            String currPacket;
+            int currAcct;
+            DocumentBuilder db = dbf.newDocumentBuilder();
+            HashMap<Integer,LinkedBlockingDeque<String>> REGISTER = AuthEngine.getAuthRegister();
+            LinkedBlockingDeque currQueue;
 
-        while(true)
-        {
-            currPacket = packetQueue.take();
+            Document dom;
 
-            Log.d("INCOMING PACKETS",currPacket);
+            while(true)
+            {
+                currElem = packetQueue.take();
+                currAcct = currElem.getAcctID();
+                currPacket = currElem.getPacket();
 
-            dom = db.parse(currPacket);
-        }
+                Log.d("INCOMING PACKETS",currPacket);
+
+                if(REGISTER.containsKey(currAcct))
+                {
+                     REGISTER.get(currAcct).add(currPacket);
+                }
+                else
+                {
+                    Exception e = new Exception("Acct not Registered in AUTH_REGISTER");
+                    throw e;
+                }
+
+
+               // dom = db.parse(currPacket);
+            }
         }
         catch (Exception e)
         {
