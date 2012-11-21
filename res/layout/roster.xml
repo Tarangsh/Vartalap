@@ -5,17 +5,24 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-    <LinearLayout android:id="@+id/roster_header"
+    <RelativeLayout android:id="@+id/roster_header"
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
-                  android:orientation="vertical">
+                  android:orientation="horizontal"
+                  android:background="#00BFFF">
 
              <TextView android:id="@+id/user_acct"
                        android:layout_width="150dp"
-                       android:layout_height="60dp"/>
+                       android:layout_height="60dp"
+                       android:textColor="#000000"
+                       android:text="User"/>
 
-
-    </LinearLayout>
+             <ImageView android:id="@+id/user_image"
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/icon"
+                        android:layout_alignParentRight="true"/>
+    </RelativeLayout>
 
     <ListView
             android:id="@+id/rosterlist"
@@ -27,4 +34,4 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"/>
 
-</LinearLayout> 
+</LinearLayout>

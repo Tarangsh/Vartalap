@@ -64,7 +64,7 @@ public class RosterManager {
             currContact =  new Contact();
             currContact.setAcctID(0);
             currContact.setJID("JID"+i+"@gmail.com");
-            currContact.setPresence("Online!!");
+            currContact.setPresence("Available");
             currContact.setImage("//home//tarang//IdeaProjects//directi//Vartalap//res//drawable-hdpi//icon.png");
 
             contactsList.add(currContact);
