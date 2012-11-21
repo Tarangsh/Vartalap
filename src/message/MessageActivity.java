@@ -3,7 +3,6 @@ package message;
 import IO.HandleIO;
 import IO.UntrackedAccountException;
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,7 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import com.example.R;
-import org.w3c.dom.Text;
 
 /**
  * Created with IntelliJ IDEA.
@@ -63,7 +61,7 @@ public class MessageActivity extends Activity implements View.OnClickListener {
 
     public static void setActivityData(MessageActivityData mData) {
         data = mData;
-        EditText prevMessage = (EditText) instance.findViewById(R.id.prevMessages);
+        TextView prevMessage = (TextView) instance.findViewById(R.id.prevMessages);
         prevMessage.setText(data.message);
         TextView toName = (TextView) instance.findViewById(R.id.toname);
         toName.setText(data.from);
