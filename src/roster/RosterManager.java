@@ -1,5 +1,7 @@
 package roster;
 
+import Accounts.Account;
+import Accounts.AccountsManager;
 import contact.Contact;
 
 import java.util.ArrayList;
@@ -20,7 +22,7 @@ public class RosterManager {
         return ROSTER_MANAGER;
     }
 
-    public void insert(String JID, String acctID, String presence, String image)
+    public void insert(String JID, int acctID, String presence, String image)
     {
         Contact contact = new Contact();
         contact.setJID(JID);
@@ -40,8 +42,53 @@ public class RosterManager {
         //insert in the list from here
     }
 
+    public ArrayList<Contact> getContactsList()
+    {
+        return contactsList;
+    }
+
     public void updatePresence(String jid)
     {
+
+    }
+
+    public void testMethod()
+    {
+        Contact currContact;
+        AccountsManager ACCOUNTS_MANAGER = AccountsManager.getInstance();
+        Account currAcct = new Account("tarang@gmail.com");
+        ACCOUNTS_MANAGER.addAccount(currAcct);
+
+        for(int i=0;i<20;i++)
+        {
+            currContact =  new Contact();
+            currContact.setAcctID(0);
+            currContact.setJID("JID"+i+"@gmail.com");
+            currContact.setPresence("Online!!");
+            currContact.setImage("//home//tarang//IdeaProjects//directi//Vartalap//res//drawable-hdpi//icon.png");
+
+            contactsList.add(currContact);
+        }
+
+
+    }
+
+    public void testMethod2()
+    {
+        Contact currContact;
+        reset();
+
+        for(int i=0;i<10;i++)
+        {
+            currContact =  new Contact();
+            currContact.setAcctID(0);
+            currContact.setJID("JID"+i+"@outlook.com");
+            currContact.setPresence("Available");
+            currContact.setImage("//home//tarang//IdeaProjects//directi//Vartalap//res//drawable-hdpi//icon.png");
+
+            contactsList.add(currContact);
+        }
+
 
     }
 

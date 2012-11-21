@@ -9,7 +9,7 @@ package contact;
  */
 public class Contact {
     String JID;
-    String acctID;
+    int acctID;
     String presence;
     String image;
 
@@ -18,7 +18,7 @@ public class Contact {
         JID = jid;
     }
 
-    public void setAcctID(String aid)
+    public void setAcctID(int aid)
     {
         acctID = aid;
     }
@@ -38,7 +38,7 @@ public class Contact {
         return JID;
     }
 
-    public String getAcctID()
+    public int getAcctID()
     {
         return acctID;
     }

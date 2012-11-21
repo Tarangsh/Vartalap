@@ -56,9 +56,10 @@ public class ReadStream implements  Runnable {
                     } else if ( tag.equalsIgnoreCase("message")) {
                         IncomingMessage.pushMessagePacket(xml,accountID);
                     } else {
+                        Log.d("TARANG",xml);
                         IQProcessor.pushPacket(xml, accountID);
                         //Log.d(LOGTAG,"calling relevant method with xml");
-                        //Log.d(LOGTAG,xml);
+
                     }
                 } else {
                     try {

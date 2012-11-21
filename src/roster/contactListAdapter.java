@@ -22,7 +22,7 @@ import java.util.ArrayList;
 public class contactListAdapter extends ArrayAdapter<Contact> {
 
     private final Context context;
-    private ArrayList<Contact> values;
+    private static ArrayList<Contact> values;
 
     public contactListAdapter(Context context, ArrayList<Contact> values) {
         super(context, R.layout.roster, values);
@@ -48,7 +48,8 @@ public class contactListAdapter extends ArrayAdapter<Contact> {
 
         jid.setText(CurrItem.getJID().split("@")[0]);
 
-        accountType.setText(CurrItem.getJID().split("@")[1].split(".")[0]);
+        accountType.setText((CurrItem.getJID().split("@")[1]).split("\\.")[0]);
+        //accountType.setText("gmail");
 
         if (CurrPresence.equals("Available"))
             availabilityImage.setImageResource(R.drawable.green);

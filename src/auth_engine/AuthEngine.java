@@ -73,9 +73,15 @@ public class AuthEngine {
        // String Hash = new String(com.sun.xml.internal.messaging.saaj.util.Base64.encode(uid.getBytes()));
         String Hash = new String(Base64.encode(uid.getBytes(),0));
 
+        String eol = System.getProperty("line.separator");
 
-        XmlDoc auth = new XmlDoc("auth",authAttributes,Hash);
-        return(auth.getDocument());
+        XmlDoc auth = new XmlDoc("auth",authAttributes,Hash.split(eol)[0]);
+
+        //String retval = "<auth xmlns=\"urn:ietf:params:xml:ns:xmpp-sasl\" mechanism=\"PLAIN\">"+Hash+"</auth>";
+        String retval = "<auth xmlns=\"urn:ietf:params:xml:ns:xmpp-sasl\" mechanism=\"PLAIN\">"+"AHRlY2hpZS50YW5nbwBTY2hhbXVkYTA5"+"</auth>";
+
+        //return(auth.getDocument());
+        return retval;
     }
 
     public String getStartTlsTag()

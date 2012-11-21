@@ -1,14 +1,14 @@
 package login;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import auth_engine.Auth_Handler;
 import com.example.R;
-import message.MakeMessageStanza;
+import roster.DisplayRosterActivity;
 
 /**
  * Created with IntelliJ IDEA.
@@ -44,10 +44,14 @@ public class DisplayLoginActivity extends Activity{
              UID = ((EditText)findViewById(R.id.inputname)).getText().toString();
              password = ((EditText)findViewById(R.id.inputpwd)).getText().toString();
 
+
+             Intent intent = new Intent(this, DisplayRosterActivity.class);
+             startActivity(intent);
+
            //  new AuthHandler().execute(UID,password);
 
-             Auth_Handler t = new Auth_Handler(UID,password);
-             new Thread(t).start();
+            // Auth_Handler t = new Auth_Handler(UID,password);
+             //new Thread(t).start();
 
             /* Socket sock = new Socket("10.10.1.31",5222);
              Intent intent = new Intent(this, DisplayRosterActivity.class);
