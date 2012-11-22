@@ -1,7 +1,7 @@
 package roster;
 
-import Accounts.Account;
-import Accounts.AccountsManager;
+import accounts.Account;
+import accounts.AccountsManager;
 import contact.Contact;
 
 import java.util.ArrayList;

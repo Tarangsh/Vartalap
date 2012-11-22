@@ -6,8 +6,8 @@ package auth_engine;
 
 //import EncodingEngine.Base64;
 
-import Accounts.Account;
-import Accounts.AccountsManager;
+import accounts.Account;
+import accounts.AccountsManager;
 import IO.HandleIO;
 import XmlEngine.XmlDoc;
 import android.util.Base64;

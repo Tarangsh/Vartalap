@@ -1,4 +1,4 @@
-package Accounts;
+package accounts;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -72,6 +72,20 @@ public class AccountsManager {
                 return currAcct.outStream;
         }
         return null;
+    }
+
+    public ArrayList<Account> getAccountStore()
+    {
+        return accountStore;
+    }
+
+    public void testmethod()
+    {
+         Account act = new Account("jid1@gmail.com");
+         ACCOUNTS_MANAGER.addAccount(act);
+
+        Account act2 = new Account("jid2@gmail.com");
+        ACCOUNTS_MANAGER.addAccount(act2);
     }
 
 }

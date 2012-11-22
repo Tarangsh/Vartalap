@@ -1,7 +1,7 @@
 package auth_engine;
 
-import Accounts.Account;
-import Accounts.AccountsManager;
+import accounts.Account;
+import accounts.AccountsManager;
 import android.util.Log;
 
 /**

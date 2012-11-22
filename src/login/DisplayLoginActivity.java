@@ -1,5 +1,7 @@
 package login;
 
+import accounts.AccountsManager;
+import accounts.DisplayAccountsActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import com.example.R;
-import roster.DisplayRosterActivity;
 
 /**
  * Created with IntelliJ IDEA.
@@ -45,8 +46,14 @@ public class DisplayLoginActivity extends Activity{
              password = ((EditText)findViewById(R.id.inputpwd)).getText().toString();
 
 
-             Intent intent = new Intent(this, DisplayRosterActivity.class);
-             startActivity(intent);
+            // Intent intent = new Intent(this, DisplayRosterActivity.class);
+            // startActivity(intent);
+
+             AccountsManager ACCOUNTS_MANAGER = AccountsManager.getInstance();
+             ACCOUNTS_MANAGER.testmethod();
+
+             Intent intent = new Intent(this, DisplayAccountsActivity.class);
+              startActivity(intent);
 
            //  new AuthHandler().execute(UID,password);
 

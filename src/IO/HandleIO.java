@@ -1,10 +1,8 @@
 package IO;
 
-import Accounts.AccountsManager;
+import accounts.AccountsManager;
 import IO.InputBuffer.ReadStream;
 import IO.OutputQueue.WriteStream;
-import android.util.Log;
-import message.MakeMessageStanza;
 
 import java.io.InputStream;
 import java.io.OutputStream;

@@ -1,6 +1,6 @@
 package message;
 
-import Accounts.AccountsManager;
+import accounts.AccountsManager;
 import android.util.Log;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

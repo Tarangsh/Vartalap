@@ -1,4 +1,4 @@
-package Accounts;
+package accounts;
 
 import IO.HandleIO;
 import IQ.IQProcessor;
