@@ -1,10 +1,13 @@
 package accounts;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ListView;
 import com.example.R;
+import login.DisplayLoginActivity;
 
 import java.util.ArrayList;
 
@@ -42,6 +45,12 @@ public class DisplayAccountsActivity extends ListActivity {
         AccountsManager ACCOUNTS_MANAGER = AccountsManager.getInstance();
         displayData = ACCOUNTS_MANAGER.getAccountStore();
         updateData();
+    }
+
+    public void addAccount(View view)
+    {
+        Intent intent = new Intent(this, DisplayLoginActivity.class);
+        startActivity(intent);
     }
 
     public void updateData() {

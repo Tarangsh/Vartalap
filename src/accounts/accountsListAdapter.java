@@ -50,7 +50,7 @@ public class accountsListAdapter extends ArrayAdapter<Account>{
         else
             acctImage.setImageResource(R.drawable.gtalk);
 
-        userImage.setImageResource(R.drawable.icon);
+        userImage.setImageResource(R.drawable.accounts_icon);
 
 
         return rowView;
