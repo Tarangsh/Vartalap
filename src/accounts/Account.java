@@ -1,7 +1,5 @@
 package accounts;
 
-import IO.HandleIO;
-import IQ.IQProcessor;
 import android.util.Log;
 import auth_engine.AuthEngine;
 
@@ -99,10 +97,10 @@ public class Account {
                 inStream = socket.getInputStream();
                 outStream = socket.getOutputStream();
 
-                IQProcessor IQ_PROCESSOR = IQProcessor.getInstance();
+              //  IQProcessor IQ_PROCESSOR = IQProcessor.getInstance();
 
-                HandleIO.trackAccount(accountID);
-                IQ_PROCESSOR.startProcessing();
+                //HandleIO.trackAccount(accountID);
+               // IQ_PROCESSOR.startProcessing();
 
                 if(AuthEngine.getInstance().gtalkAuth(accountID) == true)
                     status = 1;
@@ -110,18 +108,18 @@ public class Account {
             else
             {
                 Log.d("Vartalap","pingpong auth");
-               // Socket socket = new Socket("10.10.1.31",5222);
-                sslSocketFactory.createSocket("10.10.1.31",5222);
+                Socket socket = new Socket("10.10.1.31",5222);
+               // sslSocketFactory.createSocket("10.10.1.31",5222);
                 socket.setSoTimeout(0);
                 socket.setKeepAlive(true);
 
                 inStream = socket.getInputStream();
                 outStream = socket.getOutputStream();
 
-                IQProcessor IQ_PROCESSOR = IQProcessor.getInstance();
+                //IQProcessor IQ_PROCESSOR = IQProcessor.getInstance();
 
-                HandleIO.trackAccount(accountID);
-                IQ_PROCESSOR.startProcessing();
+                //HandleIO.trackAccount(accountID);
+                //IQ_PROCESSOR.startProcessing();
 
                 if(AuthEngine.getInstance().pingpongAuth(accountID) == true)
                     status = 1;

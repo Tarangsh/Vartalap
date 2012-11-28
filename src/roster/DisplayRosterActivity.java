@@ -8,7 +8,6 @@ import android.widget.ListView;
 import com.example.R;
 import contact.Contact;
 import login.GlobalContext;
-import message.SendActivity;
 
 import java.util.ArrayList;
 
@@ -30,7 +29,7 @@ public class DisplayRosterActivity extends ListActivity {
         setContentView(R.layout.roster);
 
         RosterManager ROSTER_MANAGER = RosterManager.getInstance();
-        ROSTER_MANAGER.testMethod();
+        //ROSTER_MANAGER.testMethod();
         displayData = ROSTER_MANAGER.getContactsList();
 
         ListView listView = (ListView) findViewById(R.id.rosterlist);
@@ -64,8 +63,9 @@ public class DisplayRosterActivity extends ListActivity {
     public void onListItemClick(ListView view, View v, int position, long id) {
         RosterManager ROSTER_MANAGER = RosterManager.getInstance();
         Contact currContact =  (Contact)view.getItemAtPosition(position);
-        SendActivity.startChat(currContact.getAcctID(),currContact.getJID());
+//        SendActivity.startChat(currContact.getAcctID(),currContact.getJID());
 
+        updateData();
         //ROSTER_MANAGER.testMethod2();
         //displayData = ROSTER_MANAGER.getContactsList();
         //updateData();
@@ -77,6 +77,7 @@ public class DisplayRosterActivity extends ListActivity {
     }
 
     public void updateData() {
+
         contactListAdapter adapter = (contactListAdapter) contactList.getAdapter();
         adapter.updateData(displayData);
     }
