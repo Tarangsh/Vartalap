@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import auth_engine.Auth_Handler;
 import com.example.R;
 import roster.DisplayRosterActivity;
@@ -43,8 +42,14 @@ public class DisplayLoginActivity extends Activity{
              String password;
              //AuthEngine AUTHENGINE = AuthEngine.getInstance();
 
-             UID = ((EditText)findViewById(R.id.inputname)).getText().toString();
-             password = ((EditText)findViewById(R.id.inputpwd)).getText().toString();
+             //UID = ((EditText)findViewById(R.id.inputname)).getText().toString();
+             //password = ((EditText)findViewById(R.id.inputpwd)).getText().toString();
+
+             UID = "tarang.s@directi.com";
+             password = "zP^Jxnx0";
+
+             //UID = "dummy.android.chat@gmail.com";
+             //password = "dummyand";
 
 
             // Intent intent = new Intent(this, DisplayRosterActivity.class);

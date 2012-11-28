@@ -41,6 +41,12 @@ public class AuthEngine {
         return  AUTH_REGISTER;
     }
 
+    private void buffClear()
+    {
+        for(int i=0;i<inBuffer.length;i++)
+            inBuffer[i] = 0;
+    }
+
     public String getStreamTag(String JID)
     {
         try
@@ -232,22 +238,24 @@ public class AuthEngine {
                     break;
             }
 
+            buffClear();
             toSrv = getRosterReqTag(JID,JID.split("\\.")[0]+"_roster");
-
             pwOutStream.println(toSrv);
+            srvInput = "";
+
             Log.d("Vartalap Communication To Server",toSrv);
-            srvInput="";
 
             while(inStream.read(inBuffer) > 0)
             {
-                //srvInput = srvInput + (new String(inBuffer));
-                srvInput = new String(inBuffer);
-                Log.d("Vartalap Communication From Server",srvInput);
-
-
+                srvInput = srvInput + (new String(inBuffer));
                 if(srvInput.contains("/iq>"))
                     break;
+
+                buffClear();
             }
+
+            Log.d("Vartalap Communication From Server",srvInput);
+
 
             ROSTER_MANAGER.processRosterList(srvInput);
 
@@ -287,8 +295,8 @@ public class AuthEngine {
             LinkedBlockingDeque<String> readSrvQueue = new LinkedBlockingDeque<String>();
             AccountsManager ACCOUNTS_MANAGER = AccountsManager.getInstance();
             Account currAccount = ACCOUNTS_MANAGER.getAccount(acctID);
+            RosterManager ROSTER_MANAGER = RosterManager.getInstance();
 
-           // AUTH_REGISTER.put((Integer)(acctID),readSrvQueue);
             String JID = currAccount.getJID();
             String password = currAccount.getPassword();
 
@@ -296,13 +304,12 @@ public class AuthEngine {
             OutputStream outStream = currAccount.getOutputStr();
             PrintWriter pwOutStream = new PrintWriter(outStream,true);
 
-            String srvInput;
-            String toSrv;
-
+            String srvInput = "";
+            String toSrv = "";
 
             toSrv = getStreamTag(JID);
             pwOutStream.println(toSrv);
-           // HandleIO.sendPacket(toSrv,acctID);
+            buffClear();
             Log.d("Vartalap Communication To Server",toSrv);
 
 
@@ -313,14 +320,15 @@ public class AuthEngine {
 
                 Log.d("Vartalap Communication From Server",srvInput);
 
-
                 if(srvInput.contains("features"))
                     break;
             }
 
-
+            toSrv = "";
             toSrv = getAuthTag(JID,password,"PLAIN");
             pwOutStream.println(toSrv);
+            srvInput = "";
+            buffClear();
             Log.d("Vartalap Communication To Server",toSrv);
 
 
@@ -338,6 +346,7 @@ public class AuthEngine {
 
             toSrv = getStreamTag(JID);
             pwOutStream.println(toSrv);
+            buffClear();
             Log.d("Vartalap Communication To Server",toSrv);
 
             while(inStream.read(inBuffer) > 0)
@@ -347,7 +356,6 @@ public class AuthEngine {
 
                 Log.d("Vartalap Communication From Server",srvInput);
 
-
                 if(srvInput.contains("features"))
                     break;
             }
@@ -356,6 +364,7 @@ public class AuthEngine {
             toSrv = getBindTag();
 
             pwOutStream.println(toSrv);
+            buffClear();
             Log.d("Vartalap Communication To Server",toSrv);
 
             while(inStream.read(inBuffer) > 0)
@@ -374,6 +383,7 @@ public class AuthEngine {
             // toSrv = getSessTag("sess_1",JID.split("@")[1]);
 
             pwOutStream.println(toSrv);
+            buffClear();
             Log.d("Vartalap Communication To Server",toSrv);
 
             while(inStream.read(inBuffer) > 0)
@@ -383,115 +393,30 @@ public class AuthEngine {
 
                 Log.d("Vartalap Communication From Server",srvInput);
 
-                if(srvInput.contains("/iq>"))
+                if(srvInput.contains("result"))
                     break;
             }
 
 
-
+            buffClear();
             toSrv = getRosterReqTag(JID,JID.split("\\.")[0]+"_roster");
-
             pwOutStream.println(toSrv);
+
             Log.d("Vartalap Communication To Server",toSrv);
-            // srvInput="";
 
             while(inStream.read(inBuffer) > 0)
             {
-                //srvInput = srvInput + (new String(inBuffer));
-                srvInput = new String(inBuffer);
-                Log.d("Vartalap Communication From Server",srvInput);
-
-
+                srvInput = srvInput + (new String(inBuffer));
                   if(srvInput.contains("/iq>"))
                     break;
+
+                buffClear();
             }
 
-            /*do
-            {
-                srvInput = readSrvQueue.take();
-                Log.d("Vartalap Communication From Server",srvInput);
-
-                if(srvInput.contains("features"))
-                    break;
-            }while(true);
+            Log.d("Vartalap Communication From Server",srvInput);
 
 
-
-            toSrv = getAuthTag(JID,password,"PLAIN");
-            HandleIO.sendPacket(toSrv,acctID);
-            Log.d("Vartalap Communication To Server",toSrv);
-
-            do
-            {
-                srvInput = readSrvQueue.take();
-                Log.d("Vartalap Communication From Server",srvInput);
-
-                if(srvInput.contains("success"))
-                    break;
-                else if(srvInput.contains("failure"))
-                {
-                    Exception e = new Exception("Authentication Failure");
-                    throw e;
-                }
-            }while(true);
-
-
-            toSrv = getStreamTag(JID);
-            HandleIO.sendPacket(toSrv,acctID);
-            Log.d("Vartalap Communication To Server",toSrv);
-
-            do
-            {
-                srvInput = readSrvQueue.take();
-                Log.d("Vartalap Communication From Server",srvInput);
-
-                if(srvInput.contains("features"))
-                    break;
-            }while(true);
-
-
-            toSrv = getBindTag();
-            HandleIO.sendPacket(toSrv,acctID);
-            Log.d("Vartalap Communication To Server",toSrv);
-
-            do
-            {
-                srvInput = readSrvQueue.take();
-                Log.d("Vartalap Communication From Server",srvInput);
-
-                if(srvInput.contains("jid"))
-                    break;
-            }while(true);
-
-
-            toSrv = getSessTag("id"+JID.split("@")[0],JID.split("@")[1]);
-            HandleIO.sendPacket(toSrv,acctID);
-            Log.d("Vartalap Communication To Server",toSrv);
-
-            do
-            {
-                srvInput = readSrvQueue.take();
-                Log.d("Vartalap Communication From Server",srvInput);
-
-                if(srvInput.contains("params"))
-                    break;
-            }while(true);
-
-
-            toSrv = getRosterReqTag(JID,JID.split("@")[0]+"_roster");
-            HandleIO.sendPacket(toSrv,acctID);
-            Log.d("Vartalap Communication To Server",toSrv);
-
-
-            do
-            {
-                srvInput = readSrvQueue.take();
-                Log.d("Vartalap Communication From Server",srvInput);
-
-                if(srvInput.contains("paramsjjjjj"))
-                    break;
-            }while(true);
-               */
+            ROSTER_MANAGER.processRosterList(srvInput);
 
             return true;
         }
