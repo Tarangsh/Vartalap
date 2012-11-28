@@ -146,6 +146,16 @@ public class RosterManager {
                   eventType = pullParser.next();
             }
 
+            //runOnUiThread(new Runnable() {
+              //  public void run() {
+
+//stuff that updates ui
+
+               // }
+            //});
+
+            DisplayRosterActivity.updateData();
+
 
         }
         catch (Exception e)

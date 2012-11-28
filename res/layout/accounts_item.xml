@@ -7,10 +7,15 @@
                 android:orientation="horizontal"
                 android:background="#FFFFFF">
 
+    <ImageView android:id="@+id/status_image"
+               android:layout_height="match_parent"
+               android:layout_width="5dp"
+               android:layout_alignParentLeft="true"/>
+
     <ImageView android:id="@+id/uimage"
                android:layout_height="match_parent"
                android:layout_width="60dp"
-               android:layout_alignParentLeft="true"/>
+               android:layout_toRightOf="@id/status_image"/>
 
     <TextView android:id="@+id/acctjid"
               android:layout_height="60dp"

@@ -10,6 +10,7 @@ import android.widget.ListView;
 import com.example.R;
 import contact.Contact;
 import login.GlobalContext;
+import message.SendActivity;
 
 import java.util.ArrayList;
 
@@ -22,7 +23,7 @@ import java.util.ArrayList;
  */
 public class DisplayRosterActivity extends ListActivity {
 
-    private ArrayList<Contact> displayData;
+    private static ArrayList<Contact> displayData;
     private static ListView contactList;
 
 
@@ -65,20 +66,10 @@ public class DisplayRosterActivity extends ListActivity {
     public void onListItemClick(ListView view, View v, int position, long id) {
         RosterManager ROSTER_MANAGER = RosterManager.getInstance();
         Contact currContact =  (Contact)view.getItemAtPosition(position);
-//        SendActivity.startChat(currContact.getAcctID(),currContact.getJID());
-
-        updateData();
-        //ROSTER_MANAGER.testMethod2();
-        //displayData = ROSTER_MANAGER.getContactsList();
-        //updateData();
-       // Intent intent = new Intent(ChatApplication.getAppContext(), ChatBox.class);
-       // intent.putExtra("buddyid", rosterItem.getBareJID());
-     //   intent.putExtra("accountUID", rosterItem.getAccount());
-       // intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        //startActivity(intent);
+        SendActivity.startChat(currContact.getAcctID(), currContact.getJID());
     }
 
-    public void updateData() {
+    public static void updateData() {
 
         contactListAdapter adapter = (contactListAdapter) contactList.getAdapter();
         adapter.updateData(displayData);

@@ -38,11 +38,17 @@ public class accountsListAdapter extends ArrayAdapter<Account>{
 
         View rowView = inflater.inflate(R.layout.accounts_item, parent, false);
 
+        ImageView statusImage = (ImageView) rowView.findViewById(R.id.status_image);
         ImageView userImage = (ImageView) rowView.findViewById(R.id.uimage);
         TextView acctJID = (TextView) rowView.findViewById(R.id.acctjid);
         ImageView acctImage = (ImageView) rowView.findViewById(R.id.typeimage);
 
         acctJID.setText(CurrItem.getJID().split("@")[0]);
+
+        if(CurrItem.getStatus() == 1)
+            statusImage.setImageResource(R.drawable.green);
+        else
+            statusImage.setImageResource(R.drawable.gray);
 
 
         if (CurrItem.getJID().split("@")[1].split("\\.")[0].equals("gmail"))

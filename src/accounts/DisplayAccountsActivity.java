@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import com.example.R;
 import login.DisplayLoginActivity;
@@ -37,6 +38,17 @@ public class DisplayAccountsActivity extends ListActivity {
         accountsListAdapter adapter = new accountsListAdapter(DisplayAccountsActivity.this, displayData);
 
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView adapterView, View view, int position, long id) {
+                onListItemClick((ListView) adapterView, view, position, id);
+            }
+        });
+    }
+
+    public void onListItemClick(ListView view, View v, int position, long id) {
+              finish();
     }
 
     public void onResume()

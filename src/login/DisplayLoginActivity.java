@@ -51,36 +51,15 @@ public class DisplayLoginActivity extends Activity{
             // startActivity(intent);
 
              AccountsManager ACCOUNTS_MANAGER = AccountsManager.getInstance();
-             //ACCOUNTS_MANAGER.testmethod();
-
-             //Intent intent = new Intent(this, DisplayAccountsActivity.class);
-              //startActivity(intent);
-
 
              Auth_Handler t = new Auth_Handler(UID,password);
              new Thread(t).start();
 
+             Thread.sleep(3000);
 
 
              Intent intent = new Intent(this, DisplayRosterActivity.class);
              startActivity(intent);
-
-            /* Socket sock = new Socket("10.10.1.31",5222);
-             Intent intent = new Intent(this, DisplayRosterActivity.class);
-             startActivity(intent);
-
-             ((TextView)findViewById(R.id.status)).setText("Signing In.....");
-
-
-             if(AUTHENGINE.pingpongAuth(sock.getInputStream(),sock.getOutputStream(),UID+"@directi.com",password)==true)
-             {
-                 //Intent intent = new Intent(this, DisplayRosterActivity.class);
-                 //startActivity(intent);
-             }
-             else
-             {
-                 ((TextView)findViewById(R.id.status)).setText("Wrong Credentials! Please Re-enter....");
-             }*/
          }
          catch (Exception e)
          {
