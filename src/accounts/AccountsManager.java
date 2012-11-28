@@ -28,10 +28,28 @@ public class AccountsManager {
 
     public int addAccount(Account acct)
     {
-        acct.setAccountID(idTracker++);
-        accountStore.add(acct);
+        String currJID = acct.getJID();
+        Boolean exists = false;
+        int currAID = -1;
 
-        return(acct.getAccountID());
+        for(Account currAcct:accountStore)
+        {
+             if(currAcct.getJID().equals(currJID))
+             {
+                 exists = true;
+                 currAID = currAcct.getAccountID();
+                 break;
+             }
+        }
+
+        if(exists == false)
+        {
+            acct.setAccountID(idTracker++);
+            accountStore.add(acct);
+            currAID = acct.getAccountID();
+        }
+
+        return(currAID);
     }
 
     public Account getAccount(int acctID)

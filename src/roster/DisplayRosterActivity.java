@@ -1,6 +1,8 @@
 package roster;
 
+import accounts.DisplayAccountsActivity;
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -80,5 +82,11 @@ public class DisplayRosterActivity extends ListActivity {
 
         contactListAdapter adapter = (contactListAdapter) contactList.getAdapter();
         adapter.updateData(displayData);
+    }
+
+    public void acctClicked(View view)
+    {
+        Intent intent = new Intent(this, DisplayAccountsActivity.class);
+        startActivity(intent);
     }
 }

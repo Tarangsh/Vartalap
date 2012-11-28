@@ -1,11 +1,13 @@
 package login;
 
+import accounts.AccountsManager;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import auth_engine.Auth_Handler;
 import com.example.R;
 import roster.DisplayRosterActivity;
@@ -41,29 +43,24 @@ public class DisplayLoginActivity extends Activity{
              String password;
              //AuthEngine AUTHENGINE = AuthEngine.getInstance();
 
-            // UID = ((EditText)findViewById(R.id.inputname)).getText().toString();
-            // password = ((EditText)findViewById(R.id.inputpwd)).getText().toString();
-
-             UID = "tarang.s@directi.com";
-             password = "zP^Jxnx0";
-
-             //UID = "dummy.android.chat@gmail.com";
-             //password = "dummyand";
+             UID = ((EditText)findViewById(R.id.inputname)).getText().toString();
+             password = ((EditText)findViewById(R.id.inputpwd)).getText().toString();
 
 
-             // Intent intent = new Intent(this, DisplayRosterActivity.class);
+            // Intent intent = new Intent(this, DisplayRosterActivity.class);
             // startActivity(intent);
 
-             //AccountsManager ACCOUNTS_MANAGER = AccountsManager.getInstance();
+             AccountsManager ACCOUNTS_MANAGER = AccountsManager.getInstance();
              //ACCOUNTS_MANAGER.testmethod();
 
              //Intent intent = new Intent(this, DisplayAccountsActivity.class);
               //startActivity(intent);
 
-             //new AuthHandler().execute(UID,password);
 
              Auth_Handler t = new Auth_Handler(UID,password);
              new Thread(t).start();
+
+
 
              Intent intent = new Intent(this, DisplayRosterActivity.class);
              startActivity(intent);

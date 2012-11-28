@@ -28,7 +28,7 @@ public class DisplayAccountsActivity extends ListActivity {
         setContentView(R.layout.accounts);
 
         AccountsManager ACCOUNTS_MANAGER = AccountsManager.getInstance();
-        ACCOUNTS_MANAGER.testmethod();
+       // ACCOUNTS_MANAGER.testmethod();
         displayData = ACCOUNTS_MANAGER.getAccountStore();
 
         ListView listView = (ListView) findViewById(R.id.acctlist);

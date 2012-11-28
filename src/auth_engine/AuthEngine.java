@@ -183,7 +183,6 @@ public class AuthEngine {
                      break;
              }
 
-
             toSrv = getAuthTag(JID,password,"PLAIN");
             pwOutStream.println(toSrv);
             //HandleIO.sendPacket(toSrv,acctID);

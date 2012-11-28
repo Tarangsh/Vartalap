@@ -16,6 +16,11 @@
                        android:layout_height="60dp"
                        android:textColor="#000000"
                        android:text="User"/>
+             <Button android:id="@+id/user_acct_button"
+                     android:layout_width="100dp"
+                     android:layout_height="40dp"
+                     android:text="Accounts"
+                     android:onClick="acctClicked"/>
 
              <ImageView android:id="@+id/user_image"
                         android:layout_width="100dp"
