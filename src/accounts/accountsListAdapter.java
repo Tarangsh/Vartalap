@@ -52,7 +52,7 @@ public class accountsListAdapter extends ArrayAdapter<Account>{
 
 
         if (CurrItem.getJID().split("@")[1].split("\\.")[0].equals("gmail"))
-            acctImage.setImageResource(R.drawable.gtalk);
+            acctImage.setImageResource(R.drawable.gtalk2);
         else
             acctImage.setImageResource(R.drawable.pingponglogo);
 

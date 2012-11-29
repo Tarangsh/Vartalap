@@ -48,8 +48,15 @@ public class contactListAdapter extends ArrayAdapter<Contact> {
 
         jid.setText(CurrItem.getJID().split("@")[0]);
 
-        accountType.setText((CurrItem.getJID().split("@")[1]).split("\\.")[0]);
-        //accountType.setText("gmail");
+        if(CurrItem.getJID() != null)
+        {
+            //accountType.setText((CurrItem.getJID().split("@")[1]).split("\\.")[0]);
+            if(CurrItem.getJID().contains("gmail"))
+                accountType.setText("gmail");
+            else if(CurrItem.getJID().contains("directi"))
+                accountType.setText("directi");
+        }
+
 
         if (CurrPresence.equals("Available"))
             availabilityImage.setImageResource(R.drawable.green);

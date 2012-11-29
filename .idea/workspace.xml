@@ -15,7 +15,11 @@
     <option name="TOOL_WINDOW_CUSTOM_FILTER" value="exception" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1128ca98-523f-46ca-bc0b-e038575ff761" name="Default" comment="" />
+    <list default="true" id="1128ca98-523f-46ca-bc0b-e038575ff761" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/accounts/accountsListAdapter.java" afterPath="$PROJECT_DIR$/src/accounts/accountsListAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/login/DisplayLoginActivity.java" afterPath="$PROJECT_DIR$/src/login/DisplayLoginActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/roster/contactListAdapter.java" afterPath="$PROJECT_DIR$/src/roster/contactListAdapter.java" />
+    </list>
     <ignored path="Vartalap2.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -128,10 +132,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="AccountsManager.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/accounts/AccountsManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="13" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DisplayLoginActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/login/DisplayLoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="13" selection-start="1322" selection-end="1322" vertical-scroll-proportion="0.40035588">
+            <state line="35" column="27" selection-start="948" selection-end="948" vertical-scroll-proportion="0.16151203">
               <folding />
             </state>
           </provider>
@@ -140,7 +153,7 @@
       <file leaf-file-name="RosterManager.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roster/RosterManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="156" column="6" selection-start="6247" selection-end="6247" vertical-scroll-proportion="0.0">
+            <state line="126" column="103" selection-start="5406" selection-end="5406" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -149,7 +162,7 @@
       <file leaf-file-name="contactListAdapter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/roster/contactListAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="0" selection-start="1608" selection-end="1608" vertical-scroll-proportion="0.0">
+            <state line="61" column="98" selection-start="2070" selection-end="2070" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -158,7 +171,7 @@
       <file leaf-file-name="AuthEngine.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/auth_engine/AuthEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="243" column="26" selection-start="7754" selection-end="7754" vertical-scroll-proportion="0.0">
+            <state line="259" column="38" selection-start="8154" selection-end="8171" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#845#883#0" expanded="true" />
                 <element signature="e#2080#2096#0" expanded="true" />
@@ -176,24 +189,6 @@
         <entry file="file://$PROJECT_DIR$/src/roster/DisplayRosterActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="71" column="18" selection-start="2212" selection-end="2212" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="accounts_item.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/accounts_item.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="57" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login_screen.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/login_screen.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="77" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -217,6 +212,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="accountsListAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/accounts/accountsListAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="52" column="81" selection-start="1683" selection-end="1683" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -233,19 +237,20 @@
         <option value="$PROJECT_DIR$/res/layout/roster.xml" />
         <option value="$PROJECT_DIR$/res/layout/login_screen.xml" />
         <option value="$PROJECT_DIR$/res/layout/accounts_item.xml" />
-        <option value="$PROJECT_DIR$/src/accounts/accountsListAdapter.java" />
         <option value="$PROJECT_DIR$/src/roster/DisplayRosterActivity.java" />
         <option value="$PROJECT_DIR$/src/roster/RosterManager.java" />
         <option value="$PROJECT_DIR$/src/auth_engine/AuthEngine.java" />
+        <option value="$PROJECT_DIR$/src/roster/contactListAdapter.java" />
+        <option value="$PROJECT_DIR$/src/accounts/accountsListAdapter.java" />
         <option value="$PROJECT_DIR$/src/login/DisplayLoginActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="72" />
-    <option name="y" value="1872" />
-    <option name="width" value="1857" />
-    <option name="height" value="1063" />
+    <option name="x" value="64" />
+    <option name="y" value="-4" />
+    <option name="width" value="1871" />
+    <option name="height" value="1092" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -612,7 +617,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="72" y="1872" width="1857" height="1063" extended-state="6" />
+    <frame x="64" y="-4" width="1871" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -623,14 +628,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32887402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31532526" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855567" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30555555" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12716118" sideWeight="0.6714443" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32855567" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12617598" sideWeight="0.6720086" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32799146" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32982844" sideWeight="0.67112595" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -708,13 +713,6 @@
         <state line="31" column="54" selection-start="303" selection-end="1458" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/accounts/accountsListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="56" selection-start="1679" selection-end="1679" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/accounts_item.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="57" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0">
@@ -736,44 +734,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/roster/DisplayRosterActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="18" selection-start="2212" selection-end="2212" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/accounts/DisplayAccountsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="13" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/accounts/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="0" selection-start="1283" selection-end="1283" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/roster/RosterManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="6" selection-start="6247" selection-end="6247" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/roster/contactListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="1608" selection-end="1608" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/auth_engine/AuthEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="243" column="26" selection-start="7754" selection-end="7754" vertical-scroll-proportion="0.0">
+        <state line="259" column="38" selection-start="8154" selection-end="8171" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#845#883#0" expanded="true" />
             <element signature="e#2080#2096#0" expanded="true" />
@@ -786,9 +749,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/roster/contactListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="98" selection-start="2070" selection-end="2070" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roster/DisplayRosterActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="18" selection-start="2212" selection-end="2212" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roster/RosterManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="126" column="103" selection-start="5406" selection-end="5406" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/accounts/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="0" selection-start="1283" selection-end="1283" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/accounts/DisplayAccountsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="13" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/accounts/AccountsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/accounts/accountsListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="81" selection-start="1683" selection-end="1683" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/login/DisplayLoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="13" selection-start="1322" selection-end="1322" vertical-scroll-proportion="0.40035588">
+        <state line="35" column="27" selection-start="948" selection-end="948" vertical-scroll-proportion="0.16151203">
           <folding />
         </state>
       </provider>
