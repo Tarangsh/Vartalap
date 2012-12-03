@@ -48,7 +48,18 @@ public class DisplayAccountsActivity extends ListActivity {
     }
 
     public void onListItemClick(ListView view, View v, int position, long id) {
-              finish();
+              Account currAccount = (Account)view.getItemAtPosition(position);
+              int status = currAccount.getStatus();
+
+              if(status== 1)
+              {
+                  currAccount.logout();
+              }
+              else
+              {
+                  currAccount.login();
+              }
+
     }
 
     public void onResume()

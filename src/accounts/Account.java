@@ -2,6 +2,7 @@ package accounts;
 
 import android.util.Log;
 import auth_engine.AuthEngine;
+import roster.RosterManager;
 
 import javax.net.ssl.SSLSocketFactory;
 import java.io.InputStream;
@@ -135,11 +136,17 @@ public class Account {
     {
         try
         {
+            RosterManager ROSTER_MANAGER = RosterManager.getInstance();
+           // PrintWriter pwOutStream = new PrintWriter(outStream,true);
+         //   pwOutStream.println("</stream:stream>");
+
             socket.close();
             socket = null;
             inStream = null;
             outStream = null;
             status = 0;
+
+            ROSTER_MANAGER.logoutRoster(accountID);
         }
         catch(Exception e)
         {

@@ -105,6 +105,15 @@ public class RosterManager {
 
     }
 
+    public void logoutRoster(int acctNo)
+    {
+        for(Contact currContact: contactsList)
+        {
+            if(currContact.getAcctID() == acctNo)
+                contactsList.remove(currContact);
+        }
+    }
+
     public void processRosterList(String rosterListStanza)
     {
         try
