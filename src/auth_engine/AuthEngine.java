@@ -150,7 +150,7 @@ public class AuthEngine {
         return reqRosterTag.getDocument();
     }
 
-    public boolean pingpongAuth(int acctID)
+    public String pingpongAuth(int acctID)
     {
         Log.d("Vartalap","inside Pingpong auth");
         try
@@ -257,24 +257,9 @@ public class AuthEngine {
             Log.d("Vartalap Communication From Server",srvInput);
 
 
-            ROSTER_MANAGER.processRosterList(srvInput);
+            //ROSTER_MANAGER.processRosterList(srvInput);
 
-
-
-            //pwOutStream.println(toSrv);
-            //HandleIO.sendPacket(toSrv,acctID);
-            //Log.d("ToServer",toSrv);
-            /*
-            while(inStream.read(inBuffer) > 0)
-            {
-                srvInput = new String(inBuffer);
-                Log.d("FromServer",srvInput);
-
-                if(srvInput.contains("jid"))
-                    return true;
-            }
-              */
-
+            return srvInput;
 
         }
         catch (Exception e)
@@ -282,12 +267,12 @@ public class AuthEngine {
             Log.d("XML Exception",e.toString());
         }
 
-        return false;
+        return "error";
     }
 
 
 
-    public boolean gtalkAuth(int acctID)
+    public String gtalkAuth(int acctID)
     {
         Log.d("Vartalap","inside gtalkauth");
         try
@@ -416,16 +401,16 @@ public class AuthEngine {
             Log.d("Vartalap Communication From Server",srvInput);
 
 
-            ROSTER_MANAGER.processRosterList(srvInput);
+            //ROSTER_MANAGER.processRosterList(srvInput);
 
-            return true;
+            return srvInput;
         }
         catch (Exception e)
         {
             Log.d("Auth Exception",e.toString());
         }
 
-        return false;
+        return "error";
     }
 
     public static void pushAuthPacket(String packet, int AcctID)

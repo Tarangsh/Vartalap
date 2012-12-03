@@ -81,12 +81,14 @@ public class Account {
         return status;
     }
 
-    public void login()
+    public String login()
     {
         Log.d("Vartalap","Login Clicked");
         try
         {
+            String rosterData;
             SSLSocketFactory sslSocketFactory = (SSLSocketFactory) SSLSocketFactory.getDefault();
+
             if(JID.contains("gmail"))
             {
                 Log.d("Vartalap","Gtalk Auth");
@@ -98,38 +100,35 @@ public class Account {
                 inStream = socket.getInputStream();
                 outStream = socket.getOutputStream();
 
-              //  IQProcessor IQ_PROCESSOR = IQProcessor.getInstance();
-
-                //HandleIO.trackAccount(accountID);
-               // IQ_PROCESSOR.startProcessing();
-
-                if(AuthEngine.getInstance().gtalkAuth(accountID) == true)
+                rosterData = AuthEngine.getInstance().gtalkAuth(accountID);
+                if(!rosterData.contains("error"))
                     status = 1;
+
+                return rosterData;
             }
             else
             {
                 Log.d("Vartalap","pingpong auth");
                 Socket socket = new Socket("10.10.1.31",5222);
-               // sslSocketFactory.createSocket("10.10.1.31",5222);
                 socket.setSoTimeout(0);
                 socket.setKeepAlive(true);
 
                 inStream = socket.getInputStream();
                 outStream = socket.getOutputStream();
 
-                //IQProcessor IQ_PROCESSOR = IQProcessor.getInstance();
-
-                //HandleIO.trackAccount(accountID);
-                //IQ_PROCESSOR.startProcessing();
-
-                if(AuthEngine.getInstance().pingpongAuth(accountID) == true)
+                rosterData = AuthEngine.getInstance().pingpongAuth(accountID);
+                if(!rosterData.contains("error"))
                     status = 1;
+
+                return rosterData;
             }
         }
         catch(Exception e)
         {
             Log.d("Login Exception",e.toString());
         }
+
+        return "error";
     }
 
     public void logout()

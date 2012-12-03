@@ -9,7 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import auth_engine.Auth_Handler;
+import auth_engine.AuthHandler;
 import com.example.R;
 import roster.DisplayRosterActivity;
 
@@ -68,9 +68,8 @@ public class DisplayLoginActivity extends Activity{
 
              if(!(UID.trim().equals("")))
              {
-                 Auth_Handler t = new Auth_Handler(UID,password);
-                 new Thread(t).start();
-                 Thread.sleep(3000);
+                 new AuthHandler().execute(new String[] {UID,password});
+
              }
 
 

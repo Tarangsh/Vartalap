@@ -1,10 +1,10 @@
 package auth_engine;
 
+import accounts.Account;
+import accounts.AccountsManager;
 import android.os.AsyncTask;
 import android.util.Log;
-
-import javax.net.ssl.SSLSocketFactory;
-import java.net.Socket;
+import roster.RosterManager;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,9 +15,10 @@ import java.net.Socket;
  */
 public class AuthHandler extends AsyncTask<String,Long,String> {
 
+    String rosterData;
+
     protected void onPreExecute() {
         super.onPreExecute();
-        //displayProgressBar("Downloading...");
     }
 
 
@@ -25,22 +26,21 @@ public class AuthHandler extends AsyncTask<String,Long,String> {
     {
         try
         {
-            AuthEngine AUTHENGINE = AuthEngine.getInstance();
+            String JID = Params[0];
+            String Password = Params[1];
 
-            SSLSocketFactory sslSocketFactory = (SSLSocketFactory) SSLSocketFactory.getDefault();
-            Socket socket = sslSocketFactory.createSocket("talk.google.com",5223);
-            socket.setSoTimeout(0);
-            socket.setKeepAlive(true);
+            AccountsManager ACCOUNTS_MANAGER = AccountsManager.getInstance();
+            int currID;
 
-          //  AUTHENGINE.gtalkAuth(socket,Params[0],Params[1]);
-            //AUTHENGINE.gtalkAuth(socket.getInputStream(),socket.getOutputStream(),Params[0],Params[1]);
-         //   AUTHENGINE.pingpongAuth(socket.getInputStream(),socket.getOutputStream(),Params[0],Params[1]);
+            Account CurrAccount = new Account(JID);
+            CurrAccount.setPassword(Password);
 
-            return null;
+            currID = ACCOUNTS_MANAGER.addAccount(CurrAccount);
+            rosterData = ACCOUNTS_MANAGER.getAccount(currID).login();
         }
         catch (Exception e)
         {
-            Log.d("Auth Exception",e.toString());
+            Log.d("Vartalap Auth Exception",e.toString());
         }
         return null;
     }
@@ -52,7 +52,8 @@ public class AuthHandler extends AsyncTask<String,Long,String> {
 
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
-        //dismissProgressBar();
+        RosterManager ROSTER_MANAGER = new RosterManager();
+        ROSTER_MANAGER.processRosterList(rosterData);
     }
 
 

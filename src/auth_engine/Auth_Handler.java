@@ -29,24 +29,12 @@ public class Auth_Handler implements Runnable{
             AccountsManager ACCOUNTS_MANAGER = AccountsManager.getInstance();
             int currID;
 
-
-
-          /*  SSLSocketFactory sslSocketFactory = (SSLSocketFactory) SSLSocketFactory.getDefault();
-            Socket socket = sslSocketFactory.createSocket("talk.google.com",5223);
-            socket.setSoTimeout(0);
-            socket.setKeepAlive(true);
-            */
             Account CurrAccount = new Account(JID);
             CurrAccount.setPassword(Password);
 
             currID = ACCOUNTS_MANAGER.addAccount(CurrAccount);
             ACCOUNTS_MANAGER.getAccount(currID).login();
 
-
-
-           // AUTHENGINE.gtalkAuth(socket,JID,Password);
-            //AUTHENGINE.gtalkAuth(socket.getInputStream(),socket.getOutputStream(),Params[0],Params[1]);
-            //   AUTHENGINE.pingpongAuth(socket.getInputStream(),socket.getOutputStream(),Params[0],Params[1]);
         }
         catch (Exception e)
         {
