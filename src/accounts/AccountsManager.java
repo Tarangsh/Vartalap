@@ -26,6 +26,16 @@ public class AccountsManager {
         return ACCOUNTS_MANAGER;
     }
 
+    public static void prefetch()
+    {
+
+    }
+
+    public static void persistentSave()
+    {
+
+    }
+
     public int addAccount(Account acct)
     {
         String currJID = acct.getJID();

@@ -104,10 +104,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DisplayAccountsActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DisplayAccountsActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/accounts/DisplayAccountsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="19" selection-start="583" selection-end="583" vertical-scroll-proportion="-0.3024055">
+            <state line="76" column="131" selection-start="2391" selection-end="2391" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -193,10 +193,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountsManager.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="AccountsManager.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/accounts/AccountsManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="19" selection-start="1430" selection-end="1430" vertical-scroll-proportion="0.0">
+            <state line="23" column="72" selection-start="542" selection-end="542" vertical-scroll-proportion="0.5412371">
               <folding />
             </state>
           </provider>
@@ -218,7 +218,6 @@
         <option value="$PROJECT_DIR$/res/layout/roster.xml" />
         <option value="$PROJECT_DIR$/res/layout/accounts_item.xml" />
         <option value="$PROJECT_DIR$/src/accounts/accountsListAdapter.java" />
-        <option value="$PROJECT_DIR$/src/accounts/AccountsManager.java" />
         <option value="$PROJECT_DIR$/src/roster/DisplayRosterActivity.java" />
         <option value="$PROJECT_DIR$/src/roster/contactListAdapter.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
@@ -229,6 +228,7 @@
         <option value="$PROJECT_DIR$/src/auth_engine/AuthEngine.java" />
         <option value="$PROJECT_DIR$/src/accounts/Account.java" />
         <option value="$PROJECT_DIR$/src/accounts/DisplayAccountsActivity.java" />
+        <option value="$PROJECT_DIR$/src/accounts/AccountsManager.java" />
       </list>
     </option>
   </component>
@@ -835,23 +835,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/accounts/AccountsManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="19" selection-start="1430" selection-end="1430" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/auth_engine/Auth_Handler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="55" selection-start="1007" selection-end="1012" vertical-scroll-proportion="0.0">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/roster/DisplayRosterActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="46" selection-start="1220" selection-end="1238" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/auth_engine/AuthEngine.java">
@@ -883,9 +871,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/roster/DisplayRosterActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="46" selection-start="1220" selection-end="1238" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/accounts/DisplayAccountsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="19" selection-start="583" selection-end="583" vertical-scroll-proportion="-0.3024055">
+        <state line="76" column="131" selection-start="2391" selection-end="2391" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/accounts/AccountsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="72" selection-start="542" selection-end="542" vertical-scroll-proportion="0.5412371">
           <folding />
         </state>
       </provider>
