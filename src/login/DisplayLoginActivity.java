@@ -71,6 +71,9 @@ public class DisplayLoginActivity extends Activity{
                  Auth_Handler t = new Auth_Handler(UID,password);
                  new Thread(t).start();
                  Thread.sleep(3000);
+
+                 ((EditText)findViewById(R.id.inputname)).setText("");
+                 ((EditText)findViewById(R.id.inputpwd)).setText("");
              }
 
 

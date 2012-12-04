@@ -27,7 +27,7 @@ public class contactListAdapter extends ArrayAdapter<Contact> {
     public contactListAdapter(Context context, ArrayList<Contact> values) {
         super(context, R.layout.roster, values);
         this.context = context;
-        this.values = values;
+        //this.values = values;
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
