@@ -259,22 +259,7 @@ public class AuthEngine {
 
             ROSTER_MANAGER.processRosterList(srvInput);
 
-
-
-            //pwOutStream.println(toSrv);
-            //HandleIO.sendPacket(toSrv,acctID);
-            //Log.d("ToServer",toSrv);
-            /*
-            while(inStream.read(inBuffer) > 0)
-            {
-                srvInput = new String(inBuffer);
-                Log.d("FromServer",srvInput);
-
-                if(srvInput.contains("jid"))
-                    return true;
-            }
-              */
-
+            return true;
 
         }
         catch (Exception e)

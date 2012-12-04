@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import auth_engine.Auth_Handler;
 import com.example.R;
 import login.DisplayLoginActivity;
 
@@ -21,12 +22,14 @@ import java.util.ArrayList;
  */
 public class DisplayAccountsActivity extends ListActivity {
 
-    private ArrayList<Account> displayData;
+    private static ArrayList<Account> displayData;
     private static ListView accountsList;
+    public static DisplayAccountsActivity ACCOUNTS_ACTIVITY;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.accounts);
+        ACCOUNTS_ACTIVITY = this;
 
         AccountsManager ACCOUNTS_MANAGER = AccountsManager.getInstance();
        // ACCOUNTS_MANAGER.testmethod();
@@ -54,10 +57,12 @@ public class DisplayAccountsActivity extends ListActivity {
               if(status== 1)
               {
                   currAccount.logout();
+                  updateData();
               }
               else
               {
-                  currAccount.login();
+                  Auth_Handler t = new Auth_Handler(currAccount.getJID(),currAccount.getPassword());
+                  new Thread(t).start();
               }
 
     }
@@ -76,7 +81,7 @@ public class DisplayAccountsActivity extends ListActivity {
         startActivity(intent);
     }
 
-    public void updateData() {
+    public static void updateData() {
         accountsListAdapter adapter = (accountsListAdapter) accountsList.getAdapter();
 
         if(adapter != null)

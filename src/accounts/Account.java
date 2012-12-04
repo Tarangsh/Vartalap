@@ -2,6 +2,7 @@ package accounts;
 
 import android.util.Log;
 import auth_engine.AuthEngine;
+import roster.DisplayRosterActivity;
 import roster.RosterManager;
 
 import javax.net.ssl.SSLSocketFactory;
@@ -104,7 +105,21 @@ public class Account {
                // IQ_PROCESSOR.startProcessing();
 
                 if(AuthEngine.getInstance().gtalkAuth(accountID) == true)
+                {
                     status = 1;
+
+                    if(DisplayAccountsActivity.ACCOUNTS_ACTIVITY != null)
+                    {
+                        DisplayAccountsActivity.ACCOUNTS_ACTIVITY.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                //To change body of implemented methods use File | Settings | File Templates.
+                                DisplayAccountsActivity.updateData();
+
+                            }
+                        });
+                    }
+                }
             }
             else
             {
@@ -123,7 +138,21 @@ public class Account {
                 //IQ_PROCESSOR.startProcessing();
 
                 if(AuthEngine.getInstance().pingpongAuth(accountID) == true)
+                {
                     status = 1;
+
+                    if(DisplayAccountsActivity.ACCOUNTS_ACTIVITY != null)
+                    {
+                        DisplayAccountsActivity.ACCOUNTS_ACTIVITY.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                //To change body of implemented methods use File | Settings | File Templates.
+                                DisplayAccountsActivity.updateData();
+
+                            }
+                        });
+                    }
+                }
             }
         }
         catch(Exception e)
