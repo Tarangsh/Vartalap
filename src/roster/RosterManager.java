@@ -9,6 +9,7 @@ import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.io.StringReader;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Created with IntelliJ IDEA.
@@ -107,10 +108,26 @@ public class RosterManager {
 
     public void logoutRoster(int acctNo)
     {
-        for(Contact currContact: contactsList)
+        for(Iterator<Contact> itr = contactsList.iterator();itr.hasNext();)
         {
+            Contact currContact = itr.next();
             if(currContact.getAcctID() == acctNo)
-                contactsList.remove(currContact);
+            {
+                itr.remove();
+            }
+        }
+
+
+        if(DisplayRosterActivity.ROSTER_ACTIVITY != null)
+        {
+            DisplayRosterActivity.ROSTER_ACTIVITY.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    //To change body of implemented methods use File | Settings | File Templates.
+                    DisplayRosterActivity.updateData();
+
+                }
+            });
         }
     }
 

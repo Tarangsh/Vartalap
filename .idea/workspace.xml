@@ -16,24 +16,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1128ca98-523f-46ca-bc0b-e038575ff761" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/circle.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/oldvartalaap.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/vartalapicon.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-ldpi/circle.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-ldpi/oldvartalaap.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-ldpi/vartalapicon.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/circle.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/oldvartalaap.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/vartalapicon.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/circle.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/oldvartalaap.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/vartalapicon.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/backgroundvarta.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-ldpi/backgroundvarta.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/backgroundvarta.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/backgroundvarta.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/example/R.java" afterPath="$PROJECT_DIR$/gen/com/example/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/login_screen.xml" afterPath="$PROJECT_DIR$/res/layout/login_screen.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/accounts/Account.java" afterPath="$PROJECT_DIR$/src/accounts/Account.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/accounts/DisplayAccountsActivity.java" afterPath="$PROJECT_DIR$/src/accounts/DisplayAccountsActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/login/DisplayLoginActivity.java" afterPath="$PROJECT_DIR$/src/login/DisplayLoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/roster/contactListAdapter.java" afterPath="$PROJECT_DIR$/src/roster/contactListAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/roster/RosterManager.java" afterPath="$PROJECT_DIR$/src/roster/RosterManager.java" />
     </list>
     <ignored path="Vartalap2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -111,7 +104,16 @@
       <file leaf-file-name="DisplayAccountsActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/accounts/DisplayAccountsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="126" selection-start="2306" selection-end="2306" vertical-scroll-proportion="0.0">
+            <state line="55" column="35" selection-start="1778" selection-end="1784" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Account.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/accounts/Account.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="154" column="0" selection-start="3526" selection-end="3526" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -120,29 +122,17 @@
       <file leaf-file-name="DisplayLoginActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/login/DisplayLoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="129" selection-start="2099" selection-end="2099" vertical-scroll-proportion="0.0">
+            <state line="71" column="39" selection-start="2139" selection-end="2139" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login_screen.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/login_screen.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="45" selection-start="2533" selection-end="2533" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RosterManager.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="RosterManager.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/roster/RosterManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="159" column="54" selection-start="6444" selection-end="6444" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#6458#6747#0" expanded="true" />
-                <element signature="e#6728#6729#0" expanded="true" />
-              </folding>
+            <state line="148" column="107" selection-start="6029" selection-end="6029" vertical-scroll-proportion="0.35852373">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -165,10 +155,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="40" selection-start="628" selection-end="628" vertical-scroll-proportion="0.23195876">
+            <state line="15" column="40" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -192,15 +182,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="accountsListAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/accounts/accountsListAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="81" selection-start="1683" selection-end="1683" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -219,14 +200,14 @@
         <option value="$PROJECT_DIR$/src/auth_engine/AuthEngine.java" />
         <option value="$PROJECT_DIR$/src/accounts/accountsListAdapter.java" />
         <option value="$PROJECT_DIR$/src/accounts/AccountsManager.java" />
-        <option value="$PROJECT_DIR$/src/accounts/Account.java" />
-        <option value="$PROJECT_DIR$/src/accounts/DisplayAccountsActivity.java" />
         <option value="$PROJECT_DIR$/src/roster/DisplayRosterActivity.java" />
-        <option value="$PROJECT_DIR$/src/roster/RosterManager.java" />
         <option value="$PROJECT_DIR$/src/roster/contactListAdapter.java" />
-        <option value="$PROJECT_DIR$/src/login/DisplayLoginActivity.java" />
-        <option value="$PROJECT_DIR$/res/layout/login_screen.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/layout/login_screen.xml" />
+        <option value="$PROJECT_DIR$/src/accounts/DisplayAccountsActivity.java" />
+        <option value="$PROJECT_DIR$/src/login/DisplayLoginActivity.java" />
+        <option value="$PROJECT_DIR$/src/accounts/Account.java" />
+        <option value="$PROJECT_DIR$/src/roster/RosterManager.java" />
       </list>
     </option>
   </component>
@@ -262,6 +243,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -276,7 +267,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -496,8 +486,8 @@
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="AndroidTargetDevices" value="cff1930a94a55ae" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
@@ -505,10 +495,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/res/drawable-hdpi" />
-      <recent name="$PROJECT_DIR$/res/drawable-ldpi" />
-      <recent name="$PROJECT_DIR$/res/drawable-mdpi" />
       <recent name="$PROJECT_DIR$/res/drawable-xhdpi" />
+      <recent name="$PROJECT_DIR$/res/drawable-mdpi" />
+      <recent name="$PROJECT_DIR$/res/drawable-ldpi" />
+      <recent name="$PROJECT_DIR$/res/drawable-hdpi" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/res/drawable-xhdpi" />
@@ -538,6 +528,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -563,24 +571,6 @@
       <envs />
       <properties />
       <listeners />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -690,13 +680,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32982844" sideWeight="0.6720086" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32761484" sideWeight="0.6720086" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3974359" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -708,10 +697,11 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2252352" sideWeight="0.6720086" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2252352" sideWeight="0.6720086" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32799146" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -775,16 +765,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/accounts.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="65" selection-start="1108" selection-end="1155" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/roster.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="54" selection-start="303" selection-end="1458" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/accounts_item.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="57" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0" />
@@ -800,54 +780,29 @@
         <state line="168" column="83" selection-start="5385" selection-end="5443" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/accounts/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="10" selection-start="3401" selection-end="3401" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/accounts/accountsListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="81" selection-start="1683" selection-end="1683" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/roster/RosterManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="54" selection-start="6444" selection-end="6444" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#6458#6747#0" expanded="true" />
-            <element signature="e#6728#6729#0" expanded="true" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/res/drawable-xhdpi/icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/accounts/DisplayAccountsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="126" selection-start="2306" selection-end="2306" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/res/drawable-xhdpi/logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/roster/contactListAdapter.java">
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="119" selection-start="1036" selection-end="1036" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="15" column="40" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/login_screen.xml">
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="45" selection-start="2533" selection-end="2533" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/login/DisplayLoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="129" selection-start="2099" selection-end="2099" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="4" column="52" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/auth_engine/Auth_Handler.java">
@@ -855,23 +810,47 @@
         <state line="42" column="48" selection-start="1147" selection-end="1147" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/login_screen.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="4" selection-start="2711" selection-end="2711" vertical-scroll-proportion="0.9079103">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roster/contactListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="119" selection-start="1036" selection-end="1036" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/roster/DisplayRosterActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="46" selection-start="1220" selection-end="1238" vertical-scroll-proportion="0.0">
+        <state line="43" column="46" selection-start="1220" selection-end="1238" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/accounts/DisplayAccountsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="35" selection-start="1778" selection-end="1784" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/src/accounts/Account.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="52" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0">
+        <state line="154" column="0" selection-start="3526" selection-end="3526" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/src/login/DisplayLoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="40" selection-start="628" selection-end="628" vertical-scroll-proportion="0.23195876">
+        <state line="71" column="39" selection-start="2139" selection-end="2139" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/roster/RosterManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="107" selection-start="6029" selection-end="6029" vertical-scroll-proportion="0.35852373">
           <folding />
         </state>
       </provider>

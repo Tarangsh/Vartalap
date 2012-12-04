@@ -140,7 +140,9 @@ public class Account {
            // PrintWriter pwOutStream = new PrintWriter(outStream,true);
          //   pwOutStream.println("</stream:stream>");
 
-            socket.close();
+            if(socket != null)
+                socket.close();
+
             socket = null;
             inStream = null;
             outStream = null;

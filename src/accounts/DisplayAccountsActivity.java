@@ -53,7 +53,7 @@ public class DisplayAccountsActivity extends ListActivity {
 
               if(status== 1)
               {
-                 // currAccount.logout();
+                  currAccount.logout();
               }
               else
               {
