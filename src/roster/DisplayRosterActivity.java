@@ -25,11 +25,14 @@ public class DisplayRosterActivity extends ListActivity {
 
     private static ArrayList<Contact> displayData;
     private static ListView contactList;
+    public static DisplayRosterActivity ROSTER_ACTIVITY;
 
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.roster);
+
+        ROSTER_ACTIVITY = this;
 
         RosterManager ROSTER_MANAGER = RosterManager.getInstance();
         //ROSTER_MANAGER.testMethod();

@@ -155,17 +155,17 @@ public class RosterManager {
                   eventType = pullParser.next();
             }
 
-            //runOnUiThread(new Runnable() {
-              //  public void run() {
+            if(DisplayRosterActivity.ROSTER_ACTIVITY != null)
+            {
+                DisplayRosterActivity.ROSTER_ACTIVITY.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        //To change body of implemented methods use File | Settings | File Templates.
+                        DisplayRosterActivity.updateData();
 
-//stuff that updates ui
-
-               // }
-            //});
-
-    //        DisplayRosterActivity.updateData();
-
-
+                    }
+                });
+            }
         }
         catch (Exception e)
         {

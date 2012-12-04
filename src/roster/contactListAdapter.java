@@ -76,6 +76,7 @@ public class contactListAdapter extends ArrayAdapter<Contact> {
     public void updateData(ArrayList<Contact> List) {
         values = List;
         this.notifyDataSetChanged();
+
     }
 
 }
