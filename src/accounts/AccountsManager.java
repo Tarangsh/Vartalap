@@ -1,7 +1,8 @@
 package accounts;
 
-import java.io.InputStream;
-import java.io.OutputStream;
+import android.util.Log;
+
+import java.io.*;
 import java.util.ArrayList;
 
 /**
@@ -11,29 +12,71 @@ import java.util.ArrayList;
  * Time: 5:02 AM
  * To change this template use File | Settings | File Templates.
  */
-public class AccountsManager {
+public class AccountsManager implements Serializable {
 
-    ArrayList<Account> accountStore = new ArrayList<Account>();
+    static ArrayList<Account> accountStore = new ArrayList<Account>();
 
     static AccountsManager ACCOUNTS_MANAGER = new AccountsManager();
     static int idTracker = 0;
 
     private AccountsManager()
-    {}
+    {
+         storageReader t = new storageReader();
+         new Thread(t).start();
+    }
+
+    protected void finalize()
+    {
+       // storageWriter t = new storageWriter();
+        //new Thread(t).start();
+
+        persistentSave();
+    }
 
     public static AccountsManager getInstance()
     {
         return ACCOUNTS_MANAGER;
     }
 
-    public static void prefetch()
+    static void prefetch()
     {
+        try
+        {
+             ObjectInputStream os = new ObjectInputStream(new FileInputStream("Vartalap.ser"));
+             Account currAccount = null;
 
+             if(os != null)
+             {
+                  while((currAccount = (Account)os.readObject()) != null)
+                  {
+                       accountStore.add(currAccount);
+                  }
+             }
+        }
+        catch (Exception e)
+        {
+             Log.d("Vartalaap Persistent save exception:",e.toString());
+        }
     }
 
-    public static void persistentSave()
+    static void persistentSave()
     {
+        try
+        {
+           // File F =
+            FileOutputStream fs = new FileOutputStream("Vartalap.ser");
+            ObjectOutputStream os = new ObjectOutputStream(fs);
 
+            for(Account currAccount: accountStore)
+            {
+                 os.writeObject(currAccount);
+            }
+            os.close();
+        }
+        catch (Exception e)
+        {
+            Log.d("Vartalaap Persistent save exception:",e.toString());
+        }
     }
 
     public int addAccount(Account acct)

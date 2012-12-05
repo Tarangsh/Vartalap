@@ -10,7 +10,6 @@ import android.widget.ListView;
 import com.example.R;
 import contact.Contact;
 import login.GlobalContext;
-import message.SendActivity;
 
 import java.util.ArrayList;
 
@@ -69,7 +68,7 @@ public class DisplayRosterActivity extends ListActivity {
     public void onListItemClick(ListView view, View v, int position, long id) {
         RosterManager ROSTER_MANAGER = RosterManager.getInstance();
         Contact currContact =  (Contact)view.getItemAtPosition(position);
-        SendActivity.startChat(currContact.getAcctID(), currContact.getJID());
+       // SendActivity.startChat(currContact.getAcctID(), currContact.getJID());
     }
 
     public static void updateData() {

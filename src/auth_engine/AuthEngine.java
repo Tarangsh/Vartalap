@@ -257,7 +257,7 @@ public class AuthEngine {
             Log.d("Vartalap Communication From Server",srvInput);
 
 
-            ROSTER_MANAGER.processRosterList(srvInput);
+            ROSTER_MANAGER.processRosterList(srvInput,acctID);
 
             return true;
 
@@ -401,7 +401,7 @@ public class AuthEngine {
             Log.d("Vartalap Communication From Server",srvInput);
 
 
-            ROSTER_MANAGER.processRosterList(srvInput);
+            ROSTER_MANAGER.processRosterList(srvInput,acctID);
 
             return true;
         }

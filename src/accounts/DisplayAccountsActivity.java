@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import auth_engine.Auth_Handler;
+import auth_engine.CloseConnection;
 import com.example.R;
 import login.DisplayLoginActivity;
 
@@ -56,8 +57,8 @@ public class DisplayAccountsActivity extends ListActivity {
 
               if(status== 1)
               {
-                  currAccount.logout();
-                  updateData();
+                  CloseConnection t = new CloseConnection(currAccount);
+                  new Thread(t).start();
               }
               else
               {
@@ -73,6 +74,13 @@ public class DisplayAccountsActivity extends ListActivity {
         AccountsManager ACCOUNTS_MANAGER = AccountsManager.getInstance();
         displayData = ACCOUNTS_MANAGER.getAccountStore();
         updateData();
+    }
+
+    public void onDestroy()
+    {
+        super.onDestroy();
+        storageWriter t = new storageWriter();
+        new Thread(t).start();
     }
 
     public void addAccount(View view)

@@ -131,7 +131,7 @@ public class RosterManager {
         }
     }
 
-    public void processRosterList(String rosterListStanza)
+    public void processRosterList(String rosterListStanza, int acctID)
     {
         try
         {
@@ -162,7 +162,7 @@ public class RosterManager {
                            if(pullParser.getAttributeName(iter).equalsIgnoreCase("jid"))
                            {
                                contactJID = pullParser.getAttributeValue(iter);
-                               insert(contactJID,0,"Available","");
+                               insert(contactJID,acctID,"Available","");
                            }
 
                            iter++;

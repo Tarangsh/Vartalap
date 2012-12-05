@@ -2,7 +2,6 @@ package accounts;
 
 import android.util.Log;
 import auth_engine.AuthEngine;
-import roster.DisplayRosterActivity;
 import roster.RosterManager;
 
 import javax.net.ssl.SSLSocketFactory;
@@ -98,11 +97,7 @@ public class Account {
 
                 inStream = socket.getInputStream();
                 outStream = socket.getOutputStream();
-
-              //  IQProcessor IQ_PROCESSOR = IQProcessor.getInstance();
-
-                //HandleIO.trackAccount(accountID);
-               // IQ_PROCESSOR.startProcessing();
+                this.socket = socket;
 
                 if(AuthEngine.getInstance().gtalkAuth(accountID) == true)
                 {
@@ -125,17 +120,12 @@ public class Account {
             {
                 Log.d("Vartalap","pingpong auth");
                 Socket socket = new Socket("10.10.1.31",5222);
-               // sslSocketFactory.createSocket("10.10.1.31",5222);
                 socket.setSoTimeout(0);
                 socket.setKeepAlive(true);
 
                 inStream = socket.getInputStream();
                 outStream = socket.getOutputStream();
-
-                //IQProcessor IQ_PROCESSOR = IQProcessor.getInstance();
-
-                //HandleIO.trackAccount(accountID);
-                //IQ_PROCESSOR.startProcessing();
+                this.socket = socket;
 
                 if(AuthEngine.getInstance().pingpongAuth(accountID) == true)
                 {
@@ -178,6 +168,18 @@ public class Account {
             status = 0;
 
             ROSTER_MANAGER.logoutRoster(accountID);
+
+            if(DisplayAccountsActivity.ACCOUNTS_ACTIVITY != null)
+            {
+                DisplayAccountsActivity.ACCOUNTS_ACTIVITY.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        //To change body of implemented methods use File | Settings | File Templates.
+                        DisplayAccountsActivity.updateData();
+
+                    }
+                });
+            }
         }
         catch(Exception e)
         {
