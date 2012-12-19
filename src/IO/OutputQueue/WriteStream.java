@@ -4,6 +4,7 @@ import android.util.Log;
 
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 /**
@@ -19,9 +20,11 @@ public class WriteStream implements  Runnable {
     ArrayList<String> writePackets;
     private static final String LOGTAG = "WriteStream";
     int accountID;
+    PrintWriter pw ;
 
     public WriteStream(OutputStream os , int accountID ) {
         this.os = os;
+        pw = new PrintWriter(os,true);
         writePackets = new ArrayList<String>();
         this.accountID = accountID;
     }
@@ -29,7 +32,6 @@ public class WriteStream implements  Runnable {
     public void run() {
         while( true) {
             String packet = null;
-            // see if some unoutputed packet is here , if there write.
             synchronized (this) {
                 if(writePackets.size() > 0) {
                     packet = writePackets.remove(0);
@@ -37,11 +39,16 @@ public class WriteStream implements  Runnable {
             }
             if(packet!=null) {
                 // write it
-                try {
-                    os.write(packet.getBytes());
-                } catch(IOException ioe) {
-                    Log.d(LOGTAG , "IO Exception");
-                }
+
+                    //os.write(packet.getBytes());
+                    //os.flush();
+                    pw.println(packet);
+                    pw.flush();
+                    Log.d(LOGTAG,"1 packet written to outputstream at system time : " + System.currentTimeMillis());
+                    Log.d(LOGTAG,"packet written was : ");
+                    Log.d(LOGTAG,packet);
+                    Log.d(LOGTAG,"this was the packet written ");
+
             } else {
                 try {
                     Thread.sleep(10);

@@ -16,11 +16,12 @@ import java.io.*;
  * Time: 10:49 AM
  * To change this template use File | Settings | File Templates.
  */
-public class ReadStream implements  Runnable {
+public class ReadStream implements Runnable {
 
     InputStream is ;
     private static final String LOGTAG = "ReadStream";
     int accountID;
+    byte[]b;
 
     public ReadStream(InputStream is ,int accountID) {
         this.is = is;
@@ -28,11 +29,22 @@ public class ReadStream implements  Runnable {
     }
 
     public void run() {
+        b = new byte[60000];
+        //BufferedReader br = new BufferedReader(new InputStreamReader(is));
         while(true) {
+
             try {
-                BufferedReader br = new BufferedReader(new InputStreamReader(is));
-                String xml = br.readLine();
-                if(xml != null) {
+                //String xml = br.readLine();
+
+                int x = is.read(b);
+                String xml = "";
+                while(x>0) {
+                   xml = xml.concat(new String(b,0,x));
+                    x = is.read(b);
+                }
+               // if(xml!=null) {
+                if(!xml.equalsIgnoreCase(""))  {
+                    Log.d(LOGTAG,"packet received");
                     StringReader stringReader = new StringReader(xml);
                     XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
                     factory.setNamespaceAware(true);
@@ -57,8 +69,8 @@ public class ReadStream implements  Runnable {
                         IncomingMessage.pushMessagePacket(xml,accountID);
                     } else {
                         IQProcessor.pushPacket(xml, accountID);
-                        //Log.d(LOGTAG,"calling relevant method with xml");
-                        //Log.d(LOGTAG,xml);
+                        Log.d(LOGTAG,"calling relevant method with xml");
+                        Log.d(LOGTAG,xml);
                     }
                 } else {
                     try {

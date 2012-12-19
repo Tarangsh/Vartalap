@@ -41,15 +41,18 @@ public class HandleIO {
         OutputStream os =  AccountsManager.getInstance().getOutStr(accountID);
         ReadStream rs = new ReadStream(is,accountID);
         Thread t1 = new Thread(rs);
+        t1.setPriority(Thread.MAX_PRIORITY);
         t1.start();
         WriteStream ws = new WriteStream(os,accountID);
         Thread t2 = new Thread(ws);
+        t2.setPriority(Thread.MAX_PRIORITY);
         t2.start();
         accounts.add(mainObject.new AccountInfo(rs,ws,accountID));
         // start a thread each for is and os.
     }
 
     public static void sendPacket(String xml , int accountID) throws UntrackedAccountException {
+        Log.d(LOGTAG,"packet sending request received for account : " + accountID);
         AccountInfo ai = getAccountInfo(accountID);
         if(ai == null) {
             throw new UntrackedAccountException("this account is untracked : accountID = " + accountID);
@@ -57,6 +60,10 @@ public class HandleIO {
             WriteStream ws = ai.ws;
             ws.addPacket(xml);
         }
+        Log.d(LOGTAG,"packet registered for sending : " + System.currentTimeMillis());
+        Log.d(LOGTAG,"packet given for writing was " );
+        Log.d(LOGTAG,xml);
+        Log.d(LOGTAG,"this was the packet ");
     }
 
     private static AccountInfo getAccountInfo(int accountID) {

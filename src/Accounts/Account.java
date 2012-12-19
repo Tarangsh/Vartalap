@@ -28,8 +28,6 @@ public class Account {
     Socket socket;
     int status;
 
-
-
     public Account(String jID)
     {
         JID = jID;
@@ -82,6 +80,10 @@ public class Account {
         return status;
     }
 
+    public Socket getSocket() {
+        return socket;
+    }
+
     public void login()
     {
         Log.d("Vartalap","Login Clicked");
@@ -92,7 +94,7 @@ public class Account {
             {
                 Log.d("Vartalap","Gtalk Auth");
 
-                Socket socket = sslSocketFactory.createSocket("talk.google.com",5223);
+                socket = sslSocketFactory.createSocket("talk.google.com",5223);
                 socket.setSoTimeout(0);
                 socket.setKeepAlive(true);
 
@@ -103,6 +105,7 @@ public class Account {
 
                 HandleIO.trackAccount(accountID);
                 IQ_PROCESSOR.startProcessing();
+
 
                 if(AuthEngine.getInstance().gtalkAuth(accountID) == true)
                     status = 1;

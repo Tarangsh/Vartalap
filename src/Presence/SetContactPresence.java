@@ -13,5 +13,6 @@ public class SetContactPresence {
         // call something in roster .
         // display notification.
         // RosterManager.updatePresence(jid,presence);
+
     }
 }

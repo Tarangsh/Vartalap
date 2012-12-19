@@ -22,6 +22,9 @@ public class SendActivity {
     private  static  ArrayList<MessageActivityData> chats = new ArrayList<MessageActivityData>();
 
     public static void startChat(int accountID , String to) {
+        if(MessageActivity.instance == null) {
+            new MessageActivity();
+        }
         MessageActivityData activityData = getMessageActivityData(accountID, to);
         if(activityData == null) {
             MessageActivityData mData = new MessageActivityData();

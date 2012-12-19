@@ -24,7 +24,7 @@ public class MessageActivity extends Activity implements View.OnClickListener {
 
     static MessageActivityData data;
     private static final String LOGTAG = "MessageActivity";
-    static MessageActivity instance ;
+    static MessageActivity instance = null;
 
     public MessageActivity() {
         super();
@@ -63,7 +63,7 @@ public class MessageActivity extends Activity implements View.OnClickListener {
 
     public static void setActivityData(MessageActivityData mData) {
         data = mData;
-        EditText prevMessage = (EditText) instance.findViewById(R.id.prevMessages);
+        TextView prevMessage = (TextView) instance.findViewById(R.id.prevMessages);
         prevMessage.setText(data.message);
         TextView toName = (TextView) instance.findViewById(R.id.toname);
         toName.setText(data.from);
